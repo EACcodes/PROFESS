@@ -1,0 +1,10 @@
+ecut 600                    # The kinetic energy cutoff
+MINI ion
+method ntn 
+meth ion cg2 
+kinetic WT
+
+print minimizer density 2   # Print details about electronic minimization 
+print minimizer geom 2     # Print lots of detail about geometry opt
+calculate stresses
+

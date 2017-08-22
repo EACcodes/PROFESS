@@ -1,0 +1,7 @@
+PROFESS 3.0 package contains the following parts:
+
+1) "Makefile".
+2) "Source" contains all the PROFESS 3.0 source code.
+3) "test" includes 3 examples.
+4) "PROFESS3_manual" contains clear instructions on the installation and execution of the program.
+5) "PROFESS3_structure" contains the PROFESS 3.0 source code structure information.

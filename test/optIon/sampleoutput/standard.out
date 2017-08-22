@@ -1,0 +1,459 @@
+ Serial version of PROFESS
+ ========================================================
+                    WELCOME TO PROFESS                   
+  (PRinceton Orbital-Free Electronic Structure Software) 
+ ========================================================
+  
+  >> Calling Initialize() ...
+ (input) Energy Cutoff                   :   0.60E+03 eV
+ (input) WT KEDF to be used.
+
+ (Read Geometry) from file displaced.ion
+ (geometry) Atom Species                 :          1
+ (geometry) Atom Number                  :          4
+ (ReadPseudo) ionCharge                  :          3
+ (Setup System) Global FFT Dims.         :    16   16   16
+
+ (NNDist_bin) Cell Size                  :     7.3140     7.5005     7.5589 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    88.5195 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0067   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   4.2869E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   1.4200E-04 sec.
+  
+******************************************************************************
+*****************   ORBITAL-FREE DENSITY FUNCTIONAL THEORY   *****************
+******************************************************************************
+*                                    Run started on: 12/01/2014 at 15:05:33  *
+* System Name: displaced                                                     *
+*                                                                            *
+*                           <<< CELL INFORMATION >>>                         *
+*                                                                            *
+*        Total Number of Ions:      4                                        *
+*     Number of Types of Ions:      1                                        *
+*  1st Cell Lattice Vector (A):     3.86910     0.10000     0.00000          *
+*  2nd Cell Lattice Vector (A):     0.00000     3.96910     0.00000          *
+*  3rd Cell Lattice Vector (A):     0.00000     0.00000     4.00000          *
+*                                                                            *
+*                         Boundary Conditions for 1st Lattice Dir.: Periodic *
+*                         Boundary Conditions for 2nd Lattice Dir.: Periodic *
+*                         Boundary Conditions for 3rd Lattice Dir.: Periodic *
+*                                                                            *
+*                        <<< SIMULATION INFORMATION >>>                      *
+*                                                                            *
+*                Kinetic Energy Cutoff:        600.000 eV                    *
+*                              # Spins:          1                           *
+*                # Electrons in system:         12                           *
+*  # Gridpoints Along 1st Lattice Dir.:         16                           *
+*  # Gridpoints Along 2nd Lattice Dir.:         16                           *
+*  # Gridpoints Along 3rd Lattice Dir.:         16                           *
+*                         # Processors:          1                           *
+*                                                                            *
+*                   Electronic Density Minimization Algorithm: NTN (default) *
+*     Ion Geometry Optimization Algorithm: Conjugate Gradient Minimization 2 *
+******************************************************************************
+  >> Calling OptimizeCell() ...
+ Ion relaxation based on conjugate gradient, starting ...
+ Hager-Zhang CG for ion relax
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.4856061397E+00  1.27E-01  3.10E-02  0  8.029E-13  3.27E-03/ 5.70E-02 -2.36E-01/ 2.22E-01
+  2   -8.4936397786E+00  1.26E-02  8.31E-03  0  7.834E-13  4.50E-03/ 5.41E-02  5.09E-02/ 1.53E-01
+  3   -8.4942793002E+00  3.97E-03  2.42E-03  0  7.834E-13  4.46E-03/ 5.38E-02  4.99E-02/ 1.45E-01
+  4   -8.4943223357E+00  8.66E-04  7.22E-04  0  8.136E-13  4.39E-03/ 5.39E-02  4.55E-02/ 1.42E-01
+  5   -8.4943318670E+00  7.20E-04  1.92E-04  0  8.296E-13  4.39E-03/ 5.40E-02  4.06E-02/ 1.42E-01
+  6   -8.4943322391E+00  9.03E-05  5.50E-05  0  8.029E-13  4.39E-03/ 5.40E-02  4.04E-02/ 1.42E-01
+  7   -8.4943322847E+00  5.00E-05  1.53E-05  0  8.029E-13  4.39E-03/ 5.40E-02  4.07E-02/ 1.42E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.494332284668E+00 Ha, volume= 4.1453E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:05:33
+
+
+===================================================================================================
+(CG2): CG iter:     1 totEnergy=  -8.494332284667543    (Ha)   maxForce=  5.5229E-02 Ha/bohr
+(CG2):              step  =  1.00E+00      (bohr) tolE    =  1.00E-06   Ha
+===================================================================================================
+
+
+ (NNDist_bin) Cell Size                  :     7.3140     7.5005     7.5589 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    88.5195 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0067   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   4.2869E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   1.3900E-04 sec.
+For linesearch: stpMax =   7.5177E+01 stpMin=  0.0000E+00 gradAlp= -5.4396E-03 alpha_0=  1.0000E+00
+ INFO: Current LnSrch does not respect xtol. Assigned value is: 
+  1.000000000000000E-012
+  Try alpha=   1.00000000000000
+
+ (NNDist_bin) Cell Size                  :     7.3140     7.5005     7.5589 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    88.5195 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0067   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   4.3818E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   1.4800E-04 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.4992174732E+00  8.99E-03  1.94E-03  0  3.553E-15  4.40E-03/ 5.11E-02  3.54E-02/ 1.38E-01
+  2   -8.4992727905E+00  1.25E-03  3.90E-04  0  4.796E-14  4.39E-03/ 5.12E-02  4.15E-02/ 1.40E-01
+  3   -8.4992756130E+00  3.62E-04  1.20E-04  0  1.066E-14  4.39E-03/ 5.11E-02  4.07E-02/ 1.39E-01
+  4   -8.4992757304E+00  4.79E-05  3.78E-05  0 -1.776E-15  4.39E-03/ 5.11E-02  4.07E-02/ 1.39E-01
+  5   -8.4992757524E+00  3.71E-05  7.60E-06  0 -1.954E-14  4.39E-03/ 5.11E-02  4.07E-02/ 1.39E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.499275752426E+00 Ha, volume= 4.1453E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:05:34
+
+ INFO: Current LnSrch does not respect xtol. Assigned value is: 
+  1.000000000000000E-012
+  Try alpha=   5.59817800609024
+
+ (NNDist_bin) Cell Size                  :     7.3140     7.5005     7.5589 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    88.5195 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0067   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   4.8200E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.0000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5111802846E+00  4.30E-02  7.82E-03  0 -7.105E-15  4.41E-03/ 3.97E-02 -2.37E-02/ 1.49E-01
+  2   -8.5116231951E+00  2.83E-03  1.86E-03  0 -1.066E-14  4.40E-03/ 3.98E-02  2.16E-02/ 1.26E-01
+  3   -8.5116837844E+00  1.82E-03  3.36E-04  0  7.105E-15  4.40E-03/ 3.96E-02  4.16E-02/ 1.23E-01
+  4   -8.5116849371E+00  1.70E-04  8.92E-05  0  4.796E-14  4.39E-03/ 3.96E-02  4.09E-02/ 1.23E-01
+  5   -8.5116850662E+00  7.92E-05  2.43E-05  0  2.665E-14  4.39E-03/ 3.96E-02  4.09E-02/ 1.23E-01
+  6   -8.5116850704E+00  7.50E-06  7.64E-06  0 -8.882E-15  4.39E-03/ 3.96E-02  4.09E-02/ 1.23E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.511685070355E+00 Ha, volume= 4.1453E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:05:34
+
+ INFO: Current LnSrch does not respect xtol. Assigned value is: 
+  1.000000000000000E-012
+  Try alpha=   7.25516300000543
+
+ (NNDist_bin) Cell Size                  :     7.3140     7.5005     7.5589 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    88.5195 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0067   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   4.9785E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.2000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5127450512E+00  1.52E-02  2.83E-03  0  3.375E-14  4.40E-03/ 3.70E-02  3.27E-02/ 1.25E-01
+  2   -8.5128661608E+00  1.79E-03  7.97E-04  0  4.619E-14  4.39E-03/ 3.70E-02  4.14E-02/ 1.19E-01
+  3   -8.5128751691E+00  6.61E-04  1.65E-04  0  1.243E-14  4.39E-03/ 3.70E-02  4.12E-02/ 1.19E-01
+  4   -8.5128754319E+00  7.69E-05  4.10E-05  0  3.020E-14  4.39E-03/ 3.69E-02  4.08E-02/ 1.19E-01
+  5   -8.5128754636E+00  4.33E-05  1.06E-05  0  3.553E-15  4.39E-03/ 3.69E-02  4.09E-02/ 1.19E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.512875463621E+00 Ha, volume= 4.1453E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:05:34
+
+ INFO: Current LnSrch does not respect xtol. Assigned value is: 
+  1.000000000000000E-012
+Ion-Optimization/CG2: Line search is successful! ==>  3 steps.
+
+===================================================================================================
+(CG2): CG iter:     2 totEnergy=  -8.512875463621025    (Ha)   maxForce=  1.1130E-02 Ha/bohr
+(CG2):              step  =  7.26E+00      (bohr) tolE    =  1.00E-06   Ha
+===================================================================================================
+
+
+ (NNDist_bin) Cell Size                  :     7.3140     7.5005     7.5589 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    88.5195 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0067   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   4.9785E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.0000E-05 sec.
+For linesearch: stpMax =   3.0952E+02 stpMin=  0.0000E+00 gradAlp= -2.6142E-04 alpha_0=  7.2552E+00
+ INFO: Current LnSrch does not respect xtol. Assigned value is: 
+  1.000000000000000E-012
+  Try alpha=   7.25516300000543
+
+ (NNDist_bin) Cell Size                  :     7.3140     7.5005     7.5589 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    88.5195 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0067   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   4.9873E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.0000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5142411403E+00  1.24E-02  2.39E-03  0  5.329E-15  4.46E-03/ 3.66E-02  3.59E-02/ 1.23E-01
+  2   -8.5142949857E+00  1.11E-03  7.41E-04  0  4.974E-14  4.46E-03/ 3.65E-02  3.88E-02/ 1.19E-01
+  3   -8.5143045903E+00  7.53E-04  1.85E-04  0  3.553E-14  4.46E-03/ 3.64E-02  4.11E-02/ 1.18E-01
+  4   -8.5143047916E+00  4.17E-05  5.60E-05  0  6.040E-14  4.46E-03/ 3.64E-02  4.13E-02/ 1.18E-01
+  5   -8.5143048392E+00  4.17E-05  1.71E-05  0  4.086E-14  4.46E-03/ 3.64E-02  4.13E-02/ 1.18E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.514304839168E+00 Ha, volume= 4.1453E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:05:34
+
+ INFO: Current LnSrch does not respect xtol. Assigned value is: 
+  1.000000000000000E-012
+  Try alpha=   14.7220801400153
+
+ (NNDist_bin) Cell Size                  :     7.3140     7.5005     7.5589 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    88.5195 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0067   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   4.9956E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.5000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5147386878E+00  1.28E-02  2.42E-03  0 -2.842E-14  4.67E-03/ 3.68E-02  3.58E-02/ 1.21E-01
+  2   -8.5147992029E+00  1.26E-03  6.25E-04  0 -1.954E-14  4.67E-03/ 3.68E-02  4.24E-02/ 1.19E-01
+  3   -8.5148064194E+00  6.44E-04  1.58E-04  0 -2.842E-14  4.67E-03/ 3.68E-02  4.22E-02/ 1.19E-01
+  4   -8.5148066269E+00  6.21E-05  3.97E-05  0 -2.309E-14  4.67E-03/ 3.68E-02  4.24E-02/ 1.18E-01
+  5   -8.5148066509E+00  3.66E-05  1.13E-05  0 -1.954E-14  4.67E-03/ 3.68E-02  4.22E-02/ 1.19E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.514806650867E+00 Ha, volume= 4.1453E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:05:34
+
+ INFO: Current LnSrch does not respect xtol. Assigned value is: 
+  1.000000000000000E-012
+Ion-Optimization/CG2: Line search is successful! ==>  2 steps.
+
+===================================================================================================
+(CG2): CG iter:     3 totEnergy=  -8.514806650867039    (Ha)   maxForce=  5.2832E-03 Ha/bohr
+(CG2):              step  =  1.47E+01      (bohr) tolE    =  1.00E-06   Ha
+===================================================================================================
+
+
+ (NNDist_bin) Cell Size                  :     7.3140     7.5005     7.5589 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    88.5195 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0067   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   4.9956E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.0000E-05 sec.
+For linesearch: stpMax =   5.2213E+02 stpMin=  0.0000E+00 gradAlp= -8.5641E-05 alpha_0=  1.4722E+01
+ INFO: Current LnSrch does not respect xtol. Assigned value is: 
+  1.000000000000000E-012
+  Try alpha=   14.7220801400153
+
+ (NNDist_bin) Cell Size                  :     7.3140     7.5005     7.5589 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    88.5195 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0067   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.0062E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.1000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5149623574E+00  1.80E-02  3.24E-03  0 -2.665E-14  4.82E-03/ 3.57E-02  2.68E-02/ 1.22E-01
+  2   -8.5151185679E+00  2.08E-03  6.68E-04  0  2.132E-14  4.79E-03/ 3.58E-02  4.06E-02/ 1.17E-01
+  3   -8.5151261630E+00  5.94E-04  1.70E-04  0 -1.599E-14  4.79E-03/ 3.58E-02  4.27E-02/ 1.17E-01
+  4   -8.5151264630E+00  8.58E-05  4.56E-05  0  4.619E-14  4.79E-03/ 3.58E-02  4.29E-02/ 1.17E-01
+  5   -8.5151264988E+00  4.62E-05  1.14E-05  0  1.066E-14  4.79E-03/ 3.58E-02  4.27E-02/ 1.17E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.515126498816E+00 Ha, volume= 4.1453E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:05:34
+
+ INFO: Current LnSrch does not respect xtol. Assigned value is: 
+  1.000000000000000E-012
+  Try alpha=   9.87184182900921
+
+ (NNDist_bin) Cell Size                  :     7.3140     7.5005     7.5589 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    88.5195 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0067   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.0355E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.1000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5152104412E+00  5.91E-03  1.07E-03  0  2.132E-14  4.82E-03/ 3.54E-02  4.03E-02/ 1.18E-01
+  2   -8.5152273285E+00  6.45E-04  3.37E-04  0 -1.421E-14  4.82E-03/ 3.54E-02  4.23E-02/ 1.16E-01
+  3   -8.5152287800E+00  2.64E-04  5.33E-05  0  8.882E-15  4.83E-03/ 3.54E-02  4.29E-02/ 1.16E-01
+  4   -8.5152288099E+00  2.42E-05  1.68E-05  0  2.309E-14  4.83E-03/ 3.54E-02  4.29E-02/ 1.16E-01
+  5   -8.5152288157E+00  1.86E-05  4.95E-06  0 -1.243E-14  4.83E-03/ 3.54E-02  4.30E-02/ 1.16E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.515228815673E+00 Ha, volume= 4.1453E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:05:34
+
+ INFO: Current LnSrch does not respect xtol. Assigned value is: 
+  1.000000000000000E-012
+Ion-Optimization/CG2: Line search is successful! ==>  2 steps.
+
+===================================================================================================
+(CG2): CG iter:     4 totEnergy=  -8.515228815672780    (Ha)   maxForce=  1.1323E-03 Ha/bohr
+(CG2):              step  =  9.87E+00      (bohr) tolE    =  1.00E-06   Ha
+===================================================================================================
+
+
+ (NNDist_bin) Cell Size                  :     7.3140     7.5005     7.5589 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    88.5195 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0067   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.0355E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.1000E-05 sec.
+For linesearch: stpMax =   2.8243E+03 stpMin=  0.0000E+00 gradAlp= -2.1662E-06 alpha_0=  9.8718E+00
+ INFO: Current LnSrch does not respect xtol. Assigned value is: 
+  1.000000000000000E-012
+  Try alpha=   9.87184182900921
+
+ (NNDist_bin) Cell Size                  :     7.3140     7.5005     7.5589 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    88.5195 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0067   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.0382E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.0000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5152446284E+00  1.36E-03  2.77E-04  0  2.665E-14  4.86E-03/ 3.53E-02  4.26E-02/ 1.17E-01
+  2   -8.5152453732E+00  1.29E-04  8.66E-05  0 -1.776E-15  4.86E-03/ 3.53E-02  4.30E-02/ 1.16E-01
+  3   -8.5152455077E+00  8.84E-05  2.13E-05  0  1.599E-14  4.86E-03/ 3.53E-02  4.30E-02/ 1.16E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.515245507723E+00 Ha, volume= 4.1453E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:05:35
+
+ INFO: Current LnSrch does not respect xtol. Assigned value is: 
+  1.000000000000000E-012
+  Try alpha=   22.2886253190558
+
+ (NNDist_bin) Cell Size                  :     7.3140     7.5005     7.5589 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    88.5195 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0067   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.0381E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.1000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5152521117E+00  1.73E-03  3.33E-04  0 -7.105E-15  4.90E-03/ 3.53E-02  4.26E-02/ 1.17E-01
+  2   -8.5152531082E+00  1.59E-04  7.29E-05  0  1.776E-15  4.89E-03/ 3.53E-02  4.30E-02/ 1.16E-01
+  3   -8.5152532255E+00  8.17E-05  1.80E-05  0 -3.020E-14  4.90E-03/ 3.53E-02  4.32E-02/ 1.16E-01
+  4   -8.5152532286E+00  7.62E-06  5.20E-06  0 -2.665E-14  4.89E-03/ 3.53E-02  4.32E-02/ 1.16E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.515253228622E+00 Ha, volume= 4.1453E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:05:35
+
+ INFO: Current LnSrch does not respect xtol. Assigned value is: 
+  1.000000000000000E-012
+Ion-Optimization/CG2: Line search is successful! ==>  2 steps.
+
+===================================================================================================
+(CG2): CG iter:     5 totEnergy=  -8.515253228622424    (Ha)   maxForce=  2.8446E-04 Ha/bohr
+(CG2):              step  =  2.23E+01      (bohr) tolE    =  1.00E-06   Ha
+===================================================================================================
+
+
+ (NNDist_bin) Cell Size                  :     7.3140     7.5005     7.5589 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    88.5195 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0067   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.0381E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.1000E-05 sec.
+For linesearch: stpMax =   1.1583E+04 stpMin=  0.0000E+00 gradAlp= -1.6158E-07 alpha_0=  2.2289E+01
+ INFO: Current LnSrch does not respect xtol. Assigned value is: 
+  1.000000000000000E-012
+  Try alpha=   22.2886253190558
+
+ (NNDist_bin) Cell Size                  :     7.3140     7.5005     7.5589 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    88.5195 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0067   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.0353E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.0000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5152528083E+00  1.11E-03  1.94E-04  0  1.776E-15  4.90E-03/ 3.53E-02  4.30E-02/ 1.16E-01
+  2   -8.5152534001E+00  1.34E-04  4.04E-05  0  1.243E-14  4.89E-03/ 3.53E-02  4.32E-02/ 1.16E-01
+  3   -8.5152534317E+00  3.84E-05  1.17E-05  0  3.197E-14  4.89E-03/ 3.53E-02  4.32E-02/ 1.16E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.515253431651E+00 Ha, volume= 4.1453E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:05:35
+
+ INFO: Current LnSrch does not respect xtol. Assigned value is: 
+  1.000000000000000E-012
+  Try alpha=   11.8868037304140
+
+ (NNDist_bin) Cell Size                  :     7.3140     7.5005     7.5589 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    88.5195 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0067   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.0369E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.0000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5152540714E+00  5.22E-04  9.01E-05  0 -1.599E-14  4.90E-03/ 3.53E-02  4.30E-02/ 1.16E-01
+  2   -8.5152541744E+00  5.23E-05  2.68E-05  0 -1.954E-14  4.90E-03/ 3.53E-02  4.32E-02/ 1.16E-01
+  3   -8.5152541840E+00  2.22E-05  4.90E-06  0 -8.882E-15  4.90E-03/ 3.53E-02  4.32E-02/ 1.16E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.515254184050E+00 Ha, volume= 4.1453E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:05:35
+
+ INFO: Current LnSrch does not respect xtol. Assigned value is: 
+  1.000000000000000E-012
+Ion-Optimization/CG2: Line search is successful! ==>  2 steps.
+
+===================================================================================================
+(CG2): CG iter:     6 totEnergy=  -8.515254184049827    (Ha)   maxForce=  8.0544E-05 Ha/bohr
+(CG2):              step  =  1.19E+01      (bohr) tolE    =  1.00E-06   Ha
+===================================================================================================
+
+
+ (NNDist_bin) Cell Size                  :     7.3140     7.5005     7.5589 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    88.5195 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0067   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.0369E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.0000E-05 sec.
+For linesearch: stpMax =   5.4438E+04 stpMin=  0.0000E+00 gradAlp= -1.5757E-08 alpha_0=  1.1887E+01
+ INFO: Current LnSrch does not respect xtol. Assigned value is: 
+  1.000000000000000E-012
+  Try alpha=   11.8868037304140
+
+ (NNDist_bin) Cell Size                  :     7.3140     7.5005     7.5589 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    88.5195 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0067   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.0377E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.0000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5152542892E+00  1.48E-04  3.51E-05  0 -1.954E-14  4.90E-03/ 3.53E-02  4.32E-02/ 1.16E-01
+  2   -8.5152543039E+00  2.08E-05  9.84E-06  0 -1.776E-15  4.90E-03/ 3.53E-02  4.32E-02/ 1.16E-01
+  3   -8.5152543055E+00  9.07E-06  2.34E-06  0 -7.105E-15  4.90E-03/ 3.53E-02  4.33E-02/ 1.16E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.515254305533E+00 Ha, volume= 4.1453E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:05:35
+
+(CG2): force drops below the criterion successfully, exit.
+
+Exit during line search.
+(CG2): force drops below the criterion successfully, exit.
+
+
+===================================================================================================
+(CG2): CG iter:     7 totEnergy=  -8.515254305533002    (Ha)   maxForce=  2.7507E-05 Ha/bohr
+(CG2):              step  =  1.19E+01      (bohr) tolE    =  1.00E-06   Ha
+===================================================================================================
+
+ --------------------- END OF PROFESS, HAVE A GREAT DAY ! --------------------
+    PROFESS      :      1.86s WALL    100.00% (       1 calls)     1.86s/call
+ -----------------------------------------------------------------------------

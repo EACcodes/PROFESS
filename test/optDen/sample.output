@@ -1,0 +1,161 @@
+ ******************************************************************************
+                             WELCOME TO PROFESS                   
+            (PRinceton Orbital-Free Electronic Structure Software) 
+ ******************************************************************************
+
+ ------------------------------------------------------------------------------
+                           READ GEOMETRY
+ Cell length (Bohr)    7.501E+00   7.501E+00   7.501E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   9.000E+01
+ Volume    (Bohr^3)    4.220E+02
+
+ ------------------------------------------------------------------------------
+                           READ PSEUDOPOTENTIAL
+ Total electron number in ReadPseudo is    12.0000000000000     
+ (System) Machine Precision              :   2.220446049250313E-016
+
+ ------------------------------------------------------------------------------
+                           SETUP FFT
+ Global FFT Dimension :    16   16   16
+ Dimension of rho for this processor : 
+ xmin, xmax :            0          15
+ ymin, ymax :            0          15
+ zmin, zmax :            0          15
+ Total electron number =    12.0000000000000     
+ Uniform rhoR =   2.843861988813334E-002
+ (GB INFO) FFT size      :       16      16      16
+ (GB INFO) FFT offset    :        0
+ (GB INFO) FFT G size    :        9      16      16
+ (GB INFO) FFT G offset  :        0
+
+ ------------------------------------------------------------------------------
+                           SETUP KEDF
+ kinetic energy density functional number is            5
+ ( 1=TF, 2=VW, 3=TF+VW, 4=WT,  5=WGC,  
+   7=LQ, 8=HQ, 10=CAT,  11=HC, 12=WGCD,
+   15=GGA, 16=WGCD+GGA, 17=EVT, 18=EVC )
+ qTable dimension:     9   16   16
+ Coefficient for TF KEDF is     1.0000
+ Coefficient for VW KEDF is     1.0000
+ Coefficient for alpha in WGC KEDF is     1.2060
+ Coefficient for beta  in WGC KEDF is     0.4607
+ Coefficient for gamma in WGC KEDF is     2.7000
+ rho0 (Electron/Bohr^3) in WGC KEDF is     0.0284
+ rhoS (Electron/Bohr^3) in WGC KEDF is     0.0284
+ hold0 =  F
+ holdS =  F
+  dV of each real space grid is now   0.103017921106027     
+ Cell length (Bohr)    7.501E+00   7.501E+00   7.501E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   9.000E+01
+ Volume    (Bohr^3)    4.220E+02
+
+ ------------------------------------------------------------------------------
+                           SETUP EWALD 
+ (Ewald) eta                             :   0.5914    
+ (Ewald) Real Space Cutoff               :    8.498     (Bohr)
+ (Ewald) Reciprocal Cutoff               :    6.283     (1/Bohr)
+
+ ------------------------------------------------------------------------------
+                           SETUP PLANE WAVE 
+
+ ------------------------------------------------------------------------------
+                           INITIALIZING WGC KERNEL
+ Fermi vector :   0.944299672057728     
+ Reference density :   2.843861988813334E-002
+ Make WGC kernels.
+ Dimension of KEDF Kernel :            9          16          16
+
+ ------------------------------------------------------------------------------
+                           REFRESH ION POSITIONS
+  
+ Calculating Ion-Ion Energy ...                   complete.     0.001 s
+  
+ Calculating Ion-Electron Potential (spline) ... 
+ complete.     0.001 s
+
+ ------------------------------------------------------------------------------
+                           DENSITY OPTIMIZATION
+ Electron number for spin            1  is    12.0000000000006     
+ Cell Volume      :            62.528228 Angstrom^3
+ Ion number       :                    4
+ Electron number  :            12.000000
+ Ion density      :             0.063971 Ion/Angstrom^3
+ Electron density :             0.191913 Electron/Angstrom^3
+ 
+|----------------------------------------------------------------------------|
+|           Sqrt Conjugate Gradient Electronic Minimization Report           |
++----------------------------------------------------------------------------+
+| Step         Energy        Pot. Norm #LCG /#Line  line     #FFT   Time (s) |
+| number        (eV)         (in code) Steps/Steps  step    (cumul) (cumul)  |
++----------------------------------------------------------------------------+
+|     0  -2.226243159654E+02 1.09806E-01   0/  0  0.000E+00      2 4.834E-03 |
+|     1  -2.312025858301E+02 3.01722E-02   2/  1  8.559E-02      8 1.814E-02 |
+|     2  -2.317471544164E+02 6.28606E-03   8/  1  3.136E-02     26 5.452E-02 |
+|     3  -2.317593951594E+02 1.69924E-03   6/  1  3.317E-03     40 8.316E-02 |
+|     4  -2.317606991483E+02 3.07561E-04   8/  1  1.741E-03     58 1.195E-01 |
+|     5  -2.317607243753E+02 6.94354E-05   4/  1  1.184E-04     68 1.404E-01 |
+|     6  -2.317607263207E+02 1.83116E-05   7/  1  6.200E-05     84 1.732E-01 |
+|                                                                            |
+|                                                   Stationary point found!  |
+| Total number of steps:                6                                    |
+| Total number of energy evals:         6                                    |
+| Total number of potential eva         6                                    |
+| Machine precision for energy:        -4.8E-14                              |
+|     Minimization time:                0.174 s                              |
++----------------------------------------------------------------------------+
+##############################################################################
+#                         Intermediate energy report                 time    #
+##############################################################################
+# Thomas-Fermi Kin. Energy =   8.882177613643E+01 eV                 0.000 s #
+# Von-Weizsacker Kin. Ener =   7.265336828174E+00 eV                 0.000 s #
+#       WGC Kinetic Energy =  -2.736269993386E+00 eV                 0.000 s #
+#                                                                            #
+#     LDA Exch-Corr Energy =  -8.879235594615E+01 eV                 0.000 s #
+#         Coulombic Energy =   4.341258167840E-01 eV                 0.000 s #
+#      Ion-Electron Energy =   6.265127740094E+01 eV                 0.000 s #
+#           Ion-Ion Energy =  -2.994046165635E+02 eV                 0.000 s #
+#                                                                            #
+#     TOTAL KINETIC ENERGY =   9.335084297122E+01 eV                         #
+#   TOTAL POTENTIAL ENERGY =  -3.251115692919E+02 eV                         #
+#             TOTAL ENERGY =  -2.317607263207E+02 eV                         #
+##############################################################################
+ 
+##############################################################################
+#                               FINAL ENERGIES                       time    #
+##############################################################################
+# Thomas-Fermi Kin. Energy =   8.882177613643E+01 eV                 0.000 s #
+# Von-Weizsacker Kin. Ener =   7.265336828174E+00 eV                 0.000 s #
+#       WGC Kinetic Energy =  -2.736269993386E+00 eV                 0.000 s #
+#                                                                            #
+#     LDA Exch-Corr Energy =  -8.879235594615E+01 eV                 0.000 s #
+#         Coulombic Energy =   4.341258167840E-01 eV                 0.000 s #
+#      Ion-Electron Energy =   6.265127740094E+01 eV                 0.000 s #
+#           Ion-Ion Energy =  -2.994046165635E+02 eV                 0.000 s #
+#                                                                            #
+#     TOTAL KINETIC ENERGY =   9.335084297122E+01 eV                         #
+#   TOTAL POTENTIAL ENERGY =  -3.251115692919E+02 eV                         #
+#             TOTAL ENERGY =  -2.317607263207E+02 eV                         #
+##############################################################################
+  
+ ----------------------------- TIME INFORMATION ------------------------------
+    PROFESS      :      0.29s WALL    100.00% (       1 calls)     0.29s/call
+    InitPROFESS  :      0.12s WALL     40.50% (       1 calls)     0.12s/call
+    KEDFRefresh  :      0.02s WALL      8.28% (       1 calls)     0.02s/call
+    IonRefresh   :      0.00s WALL      0.64% (       1 calls)     0.00s/call
+    EwaldEnergy  :      0.00s WALL      0.30% (       1 calls)     0.00s/call
+    ForwFFT_3D   :      0.02s WALL      5.12% (     338 calls)     0.00s/call
+    BackFFT_3D   :      0.01s WALL      3.22% (     337 calls)     0.00s/call
+    Pot_Ion      :      0.00s WALL      0.77% (      42 calls)     0.00s/call
+    Pot_Har      :      0.01s WALL      3.51% (      42 calls)     0.00s/call
+    Pot_Exc      :      0.02s WALL      5.53% (      42 calls)     0.00s/call
+    Pot_KEDF     :      0.11s WALL     36.73% (      42 calls)     0.00s/call
+    WGCPotPlus   :      0.08s WALL     27.13% (      42 calls)     0.00s/call
+    VWPotSqrPlus :      0.01s WALL      2.33% (      42 calls)     0.00s/call
+    NextGradient :      0.00s WALL      0.91% (       6 calls)     0.00s/call
+ -----------------------------------------------------------------------------
+ ------------------------------- TOTAL ---------------------------------------
+    PROFESS      :      0.29s WALL    100.00% (       1 calls)     0.29s/call
+ -----------------------------------------------------------------------------
+
+Run completed on: 12/01/2014 at 15:04:15 
+  

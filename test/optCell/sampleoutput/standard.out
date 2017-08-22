@@ -1,0 +1,598 @@
+ Serial version of PROFESS
+ ========================================================
+                    WELCOME TO PROFESS                   
+  (PRinceton Orbital-Free Electronic Structure Software) 
+ ========================================================
+  
+  >> Calling Initialize() ...
+ (input) Energy Cutoff                   :   0.60E+03 eV
+ (input) WT KEDF to be used.
+
+ (Read Geometry) from file displaced.ion
+ (geometry) Atom Species                 :          1
+ (geometry) Atom Number                  :          4
+ (ReadPseudo) ionCharge                  :          3
+ (Setup System) Global FFT Dims.         :    16   16   16
+
+ (NNDist_bin) Cell Size                  :     7.3140     7.5005     7.5589 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    88.5195 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0067   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.0382E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   1.4300E-04 sec.
+  
+******************************************************************************
+*****************   ORBITAL-FREE DENSITY FUNCTIONAL THEORY   *****************
+******************************************************************************
+*                                    Run started on: 12/01/2014 at 15:07:23  *
+* System Name: displaced                                                     *
+*                                                                            *
+*                           <<< CELL INFORMATION >>>                         *
+*                                                                            *
+*        Total Number of Ions:      4                                        *
+*     Number of Types of Ions:      1                                        *
+*  1st Cell Lattice Vector (A):     3.86910     0.10000     0.00000          *
+*  2nd Cell Lattice Vector (A):     0.00000     3.96910     0.00000          *
+*  3rd Cell Lattice Vector (A):     0.00000     0.00000     4.00000          *
+*                                                                            *
+*                         Boundary Conditions for 1st Lattice Dir.: Periodic *
+*                         Boundary Conditions for 2nd Lattice Dir.: Periodic *
+*                         Boundary Conditions for 3rd Lattice Dir.: Periodic *
+*                                                                            *
+*                        <<< SIMULATION INFORMATION >>>                      *
+*                                                                            *
+*                Kinetic Energy Cutoff:        600.000 eV                    *
+*                              # Spins:          1                           *
+*                # Electrons in system:         12                           *
+*  # Gridpoints Along 1st Lattice Dir.:         16                           *
+*  # Gridpoints Along 2nd Lattice Dir.:         16                           *
+*  # Gridpoints Along 3rd Lattice Dir.:         16                           *
+*                         # Processors:          1                           *
+*                                                                            *
+*                   Electronic Density Minimization Algorithm: NTN (default) *
+*                                  Ion Geometry Optimization Algorithm: None *
+******************************************************************************
+  >> Calling OptimizeCell() ...
+Source/CellOptimizers.f90 >>> Cell is to be FULLY relaxed.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.4941470684E+00  8.64E-02  3.08E-02  0  8.598E-13  6.32E-03/ 3.42E-02 -2.63E-02/ 5.25E-01
+  2   -8.5147812471E+00  3.18E-02  6.31E-03  0  8.367E-13  4.28E-03/ 3.54E-02  8.02E-03/ 1.24E-01
+  3   -8.5151947440E+00  2.88E-03  1.98E-03  0  8.509E-13  4.38E-03/ 3.53E-02  4.25E-02/ 1.16E-01
+  4   -8.5152509715E+00  1.69E-03  4.56E-04  0  8.900E-13  4.38E-03/ 3.54E-02  3.99E-02/ 1.15E-01
+  5   -8.5152534964E+00  2.38E-04  1.05E-04  0  8.598E-13  4.39E-03/ 3.55E-02  4.08E-02/ 1.16E-01
+  6   -8.5152537021E+00  1.15E-04  2.39E-05  0  9.273E-13  4.39E-03/ 3.55E-02  4.09E-02/ 1.16E-01
+  7   -8.5152537067E+00  7.75E-06  6.23E-06  0  8.491E-13  4.39E-03/ 3.55E-02  4.09E-02/ 1.16E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.515253706718E+00 Ha, volume= 4.1453E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:07:23
+
+
+; Cell optimization at step  1 / 100, max(stress):  0.1250E-03, total energy:  -8.5152537    ;
+stress (Ha/bohr^3):
+  -1.2498E-04  3.7158E-05 -1.5327E-09
+   3.7158E-05 -8.9320E-05  3.0938E-10
+  -1.5327E-09  3.0938E-10 -7.3592E-05
+lattice (bohr):
+   7.3115E+00  1.8897E-01  0.0000E+00
+   0.0000E+00  7.5005E+00  0.0000E+00
+   0.0000E+00  0.0000E+00  7.5589E+00
+
+
+
+ (NNDist_bin) Cell Size                  :     7.3984     7.5604     7.6073 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    88.9352 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0035   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.1065E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   1.3800E-04 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5159705944E+00  6.24E-03  7.59E-04  0 -5.329E-15  4.40E-03/ 3.44E-02  3.55E-02/ 1.12E-01
+  2   -8.5159769284E+00  4.16E-04  1.73E-04  0 -3.020E-14  4.39E-03/ 3.44E-02  3.98E-02/ 1.10E-01
+  3   -8.5159776879E+00  2.28E-04  4.40E-05  0  3.908E-14  4.39E-03/ 3.43E-02  3.95E-02/ 1.11E-01
+  4   -8.5159777116E+00  2.15E-05  1.37E-05  0 -3.197E-14  4.40E-03/ 3.43E-02  3.96E-02/ 1.11E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.515977711620E+00 Ha, volume= 4.2544E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:07:24
+
+
+; Cell optimization at step  2 / 100, max(stress):  0.3456E-04, total energy:  -8.5159777    ;
+stress (Ha/bohr^3):
+  -3.4559E-05  2.2718E-05 -3.1676E-10
+   2.2718E-05 -7.3090E-06  7.3507E-10
+  -3.1676E-10  7.3507E-10  2.6879E-06
+lattice (bohr):
+   7.3966E+00  1.6369E-01  1.0427E-06
+  -2.6786E-02  7.5604E+00 -2.3145E-07
+   1.0086E-06 -2.0360E-07  7.6073E+00
+
+
+
+ (NNDist_bin) Cell Size                  :     7.4265     7.5669     7.6052 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    89.2289 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0018   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.1319E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.0000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5160625485E+00  1.82E-03  2.89E-04  0 -2.842E-14  4.40E-03/ 3.40E-02  3.95E-02/ 1.09E-01
+  2   -8.5160635826E+00  1.75E-04  8.94E-05  0  1.776E-15  4.40E-03/ 3.39E-02  3.92E-02/ 1.09E-01
+  3   -8.5160637075E+00  8.80E-05  1.62E-05  0 -4.619E-14  4.40E-03/ 3.39E-02  3.94E-02/ 1.09E-01
+  4   -8.5160637107E+00  8.62E-06  4.15E-06  0 -4.441E-14  4.40E-03/ 3.39E-02  3.94E-02/ 1.09E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.516063710718E+00 Ha, volume= 4.2734E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:07:24
+
+
+; Cell optimization at step  3 / 100, max(stress):  0.1722E-04, total energy:  -8.5160637    ;
+stress (Ha/bohr^3):
+  -1.7221E-05  1.5883E-05 -1.5034E-10
+   1.5883E-05  5.8940E-06  5.6933E-10
+  -1.5034E-10  5.6933E-10  1.3343E-05
+lattice (bohr):
+   7.4251E+00  1.4490E-01  1.3032E-06
+  -4.5813E-02  7.5667E+00 -8.3280E-07
+   1.2592E-06 -7.9280E-07  7.6052E+00
+
+
+
+ (NNDist_bin) Cell Size                  :     7.4433     7.5615     7.5922 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    89.4735 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0008   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.1470E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.0000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5161135006E+00  1.33E-03  1.76E-04  0 -3.908E-14  4.40E-03/ 3.37E-02  3.96E-02/ 1.09E-01
+  2   -8.5161137920E+00  7.50E-05  5.27E-05  0 -2.132E-14  4.40E-03/ 3.37E-02  3.93E-02/ 1.09E-01
+  3   -8.5161138217E+00  3.39E-05  1.30E-05  0 -1.776E-15  4.40E-03/ 3.37E-02  3.94E-02/ 1.09E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.516113821659E+00 Ha, volume= 4.2729E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:07:24
+
+
+; Cell optimization at step  4 / 100, max(stress):  0.1404E-04, total energy:  -8.5161138    ;
+stress (Ha/bohr^3):
+  -1.4038E-05  1.0525E-05 -1.6021E-10
+   1.0525E-05  5.4207E-06  3.0757E-10
+  -1.6021E-10  3.0757E-10  1.1039E-05
+lattice (bohr):
+   7.4422E+00  1.2907E-01  1.4515E-06
+  -6.1640E-02  7.5613E+00 -1.3926E-06
+   1.4006E-06 -1.3435E-06  7.5922E+00
+
+
+
+ (NNDist_bin) Cell Size                  :     7.4597     7.5555     7.5793 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    89.6684 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0003   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.1594E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.0000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5161470148E+00  1.11E-03  1.79E-04  0 -1.066E-14  4.40E-03/ 3.35E-02  3.95E-02/ 1.09E-01
+  2   -8.5161472931E+00  7.05E-05  4.71E-05  0 -9.770E-14  4.40E-03/ 3.35E-02  3.93E-02/ 1.09E-01
+  3   -8.5161473307E+00  4.09E-05  1.18E-05  0  1.954E-14  4.40E-03/ 3.35E-02  3.94E-02/ 1.09E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.516147330676E+00 Ha, volume= 4.2718E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:07:24
+
+
+; Cell optimization at step  5 / 100, max(stress):  0.1157E-04, total energy:  -8.5161473    ;
+stress (Ha/bohr^3):
+  -1.1566E-05  6.4231E-06 -1.4801E-10
+   6.4231E-06  4.2082E-06  9.5886E-11
+  -1.4801E-10  9.5886E-11  8.3920E-06
+lattice (bohr):
+   7.4588E+00  1.1649E-01  1.6416E-06
+  -7.4256E-02  7.5551E+00 -1.7585E-06
+   1.5820E-06 -1.7011E-06  7.5793E+00
+
+
+
+ (NNDist_bin) Cell Size                  :     7.4759     7.5498     7.5676 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    89.8118 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0001   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.1695E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.0000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5161683457E+00  8.89E-04  1.50E-04  0  3.553E-14  4.40E-03/ 3.34E-02  3.97E-02/ 1.08E-01
+  2   -8.5161685621E+00  6.23E-05  4.23E-05  0 -3.197E-14  4.40E-03/ 3.34E-02  3.94E-02/ 1.09E-01
+  3   -8.5161685948E+00  3.99E-05  1.07E-05  0  3.020E-14  4.40E-03/ 3.34E-02  3.94E-02/ 1.09E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.516168594847E+00 Ha, volume= 4.2713E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:07:24
+
+
+; Cell optimization at step  6 / 100, max(stress):  0.8921E-05, total energy:  -8.5161686    ;
+stress (Ha/bohr^3):
+  -8.9215E-06  3.5106E-06 -1.0444E-10
+   3.5106E-06  3.2395E-06 -3.8633E-11
+  -1.0444E-10 -3.8633E-11  6.2712E-06
+lattice (bohr):
+   7.4752E+00  1.0728E-01  1.8536E-06
+  -8.3546E-02  7.5494E+00 -1.8994E-06
+   1.7839E-06 -1.8350E-06  7.5676E+00
+
+
+
+ (NNDist_bin) Cell Size                  :     7.4910     7.5445     7.5570 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    89.9069 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0000   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.1771E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.0000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5161811547E+00  6.87E-04  1.27E-04  0  2.487E-14  4.40E-03/ 3.33E-02  3.94E-02/ 1.08E-01
+  2   -8.5161812956E+00  5.05E-05  3.38E-05  0  1.084E-13  4.40E-03/ 3.32E-02  3.94E-02/ 1.08E-01
+  3   -8.5161813182E+00  3.40E-05  9.70E-06  0  8.527E-14  4.40E-03/ 3.32E-02  3.94E-02/ 1.08E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.516181318211E+00 Ha, volume= 4.2709E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:07:24
+
+
+; Cell optimization at step  7 / 100, max(stress):  0.6499E-05, total energy:  -8.5161813    ;
+stress (Ha/bohr^3):
+  -6.4991E-06  1.6517E-06 -6.2123E-11
+   1.6517E-06  2.3038E-06 -1.1692E-10
+  -6.2123E-11 -1.1692E-10  4.4044E-06
+lattice (bohr):
+   7.4903E+00  1.0123E-01  2.0350E-06
+  -8.9692E-02  7.5440E+00 -1.8393E-06
+   1.9546E-06 -1.7697E-06  7.5570E+00
+
+
+
+ (NNDist_bin) Cell Size                  :     7.5042     7.5399     7.5481 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    89.9617 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0000   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.1824E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.0000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5161882238E+00  5.13E-04  9.54E-05  0  4.974E-14  4.40E-03/ 3.32E-02  3.96E-02/ 1.08E-01
+  2   -8.5161883185E+00  4.18E-05  2.99E-05  0  4.619E-14  4.40E-03/ 3.32E-02  3.94E-02/ 1.08E-01
+  3   -8.5161883361E+00  3.15E-05  8.49E-06  0  5.684E-14  4.40E-03/ 3.32E-02  3.94E-02/ 1.08E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.516188336131E+00 Ha, volume= 4.2708E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:07:24
+
+
+; Cell optimization at step  8 / 100, max(stress):  0.4306E-05, total energy:  -8.5161883    ;
+stress (Ha/bohr^3):
+  -4.3062E-06  6.2214E-07 -1.9732E-11
+   6.2214E-07  1.5546E-06 -1.2381E-10
+  -1.9732E-11 -1.2381E-10  2.9102E-06
+lattice (bohr):
+   7.5036E+00  9.7797E-02  2.1671E-06
+  -9.3220E-02  7.5393E+00 -1.6059E-06
+   2.0760E-06 -1.5332E-06  7.5481E+00
+
+
+
+ (NNDist_bin) Cell Size                  :     7.5147     7.5362     7.5410 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    89.9876 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0000   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.1858E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.0000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5161916830E+00  3.74E-04  7.58E-05  0 -2.842E-14  4.40E-03/ 3.31E-02  3.94E-02/ 1.08E-01
+  2   -8.5161917352E+00  3.11E-05  2.12E-05  0 -1.954E-14  4.40E-03/ 3.31E-02  3.94E-02/ 1.08E-01
+  3   -8.5161917457E+00  2.56E-05  4.89E-06  0 -1.599E-14  4.40E-03/ 3.31E-02  3.94E-02/ 1.08E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.516191745717E+00 Ha, volume= 4.2706E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:07:24
+
+
+; Cell optimization at step  9 / 100, max(stress):  0.2652E-05, total energy:  -8.5161917    ;
+stress (Ha/bohr^3):
+  -2.6517E-06  1.7770E-07  4.4990E-12
+   1.7770E-07  8.9009E-07 -9.4444E-11
+   4.4990E-12 -9.4444E-11  1.6910E-06
+lattice (bohr):
+   7.5141E+00  9.6227E-02  2.2210E-06
+  -9.4871E-02  7.5356E+00 -1.3065E-06
+   2.1207E-06 -1.2323E-06  7.5410E+00
+
+
+
+ (NNDist_bin) Cell Size                  :     7.5224     7.5336     7.5361 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    89.9975 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0000   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.1879E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.1000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5161930994E+00  2.63E-04  4.71E-05  0 -8.882E-15  4.40E-03/ 3.31E-02  3.93E-02/ 1.08E-01
+  2   -8.5161931214E+00  2.30E-05  1.23E-05  0  5.329E-14  4.40E-03/ 3.31E-02  3.94E-02/ 1.08E-01
+  3   -8.5161931237E+00  1.25E-05  2.44E-06  0 -5.329E-15  4.40E-03/ 3.31E-02  3.94E-02/ 1.08E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.516193123742E+00 Ha, volume= 4.2708E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:07:24
+
+
+; Cell optimization at step 10 / 100, max(stress):  0.1295E-05, total energy:  -8.5161931    ;
+stress (Ha/bohr^3):
+  -1.2953E-06  2.1941E-08  2.7603E-12
+   2.1941E-08  5.7085E-07 -6.3131E-11
+   2.7603E-12 -6.3131E-11  9.8598E-07
+lattice (bohr):
+   7.5218E+00  9.5674E-02  2.2127E-06
+  -9.5490E-02  7.5330E+00 -1.0310E-06
+   2.1051E-06 -9.5660E-07  7.5361E+00
+
+
+
+ (NNDist_bin) Cell Size                  :     7.5270     7.5316     7.5326 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    90.0000 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0000   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.1888E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.0000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5161935266E+00  1.64E-04  2.73E-05  0 -3.197E-14  4.40E-03/ 3.31E-02  3.95E-02/ 1.08E-01
+  2   -8.5161935352E+00  1.44E-05  8.15E-06  0 -3.197E-14  4.40E-03/ 3.31E-02  3.94E-02/ 1.08E-01
+  3   -8.5161935362E+00  8.27E-06  1.60E-06  0 -3.020E-14  4.40E-03/ 3.31E-02  3.94E-02/ 1.08E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.516193536246E+00 Ha, volume= 4.2702E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:07:24
+
+
+; Cell optimization at step 11 / 100, max(stress):  0.8285E-06, total energy:  -8.5161935    ;
+stress (Ha/bohr^3):
+  -8.2855E-07 -1.1094E-08 -2.8333E-12
+  -1.1094E-08 -5.9636E-08 -2.7390E-11
+  -2.8333E-12 -2.7390E-11  1.0890E-07
+lattice (bohr):
+   7.5264E+00  9.5571E-02  2.2068E-06
+  -9.5625E-02  7.5310E+00 -8.0979E-07
+   2.0941E-06 -7.3533E-07  7.5326E+00
+
+
+
+ (NNDist_bin) Cell Size                  :     7.5305     7.5318     7.5321 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    89.9999 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0000   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.1901E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.0000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5161935381E+00  1.27E-04  2.24E-05  0  3.553E-14  4.40E-03/ 3.31E-02  3.93E-02/ 1.08E-01
+  2   -8.5161935429E+00  1.11E-05  6.18E-06  0  3.553E-14  4.40E-03/ 3.31E-02  3.94E-02/ 1.08E-01
+  3   -8.5161935436E+00  6.89E-06  1.41E-06  0  2.487E-14  4.40E-03/ 3.31E-02  3.94E-02/ 1.08E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.516193543611E+00 Ha, volume= 4.2721E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:07:25
+
+
+; Cell optimization at step 12 / 100, max(stress):  0.1115E-05, total energy:  -8.5161935    ;
+stress (Ha/bohr^3):
+   8.3474E-07 -2.1616E-09  2.0747E-11
+  -2.1616E-09  1.0651E-06  5.5187E-12
+   2.0747E-11  5.5187E-12  1.1150E-06
+lattice (bohr):
+   7.5299E+00  9.5621E-02  2.2203E-06
+  -9.5623E-02  7.5312E+00 -6.9462E-07
+   2.1050E-06 -6.1995E-07  7.5321E+00
+
+
+
+ (NNDist_bin) Cell Size                  :     7.5263     7.5265     7.5265 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    89.9999 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0000   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.1868E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.0000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5161918368E+00  4.69E-04  6.24E-05  0  4.796E-14  4.39E-03/ 3.31E-02  3.89E-02/ 1.08E-01
+  2   -8.5161918808E+00  3.20E-05  1.65E-05  0  2.842E-14  4.39E-03/ 3.31E-02  3.94E-02/ 1.08E-01
+  3   -8.5161918842E+00  1.18E-05  3.15E-06  0  4.619E-14  4.40E-03/ 3.31E-02  3.95E-02/ 1.08E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.516191884178E+00 Ha, volume= 4.2635E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:07:25
+
+
+; Cell optimization at step 13 / 100, max(stress):  0.4908E-05, total energy:  -8.5161919    ;
+stress (Ha/bohr^3):
+  -4.9084E-06 -9.8827E-10 -7.2492E-11
+  -9.8827E-10 -4.8783E-06 -6.5057E-11
+  -7.2492E-11 -6.5057E-11 -4.8717E-06
+lattice (bohr):
+   7.5257E+00  9.5563E-02  2.1166E-06
+  -9.5558E-02  7.5258E+00 -7.2167E-07
+   2.0013E-06 -6.4833E-07  7.5265E+00
+
+
+
+ (NNDist_bin) Cell Size                  :     7.5325     7.5326     7.5326 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    89.9999 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0000   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.1911E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.1000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5161931749E+00  5.67E-04  7.50E-05  0  6.217E-14  4.40E-03/ 3.30E-02  4.03E-02/ 1.08E-01
+  2   -8.5161932425E+00  3.86E-05  2.22E-05  0  3.730E-14  4.40E-03/ 3.30E-02  3.95E-02/ 1.08E-01
+  3   -8.5161932482E+00  1.43E-05  4.08E-06  0  3.553E-15  4.40E-03/ 3.30E-02  3.94E-02/ 1.08E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.516193248154E+00 Ha, volume= 4.2740E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:07:25
+
+
+; Cell optimization at step 14 / 100, max(stress):  0.2288E-05, total energy:  -8.5161932    ;
+stress (Ha/bohr^3):
+   2.2590E-06 -4.5755E-10  2.4926E-11
+  -4.5755E-10  2.2825E-06  3.0762E-11
+   2.4926E-11  3.0762E-11  2.2876E-06
+lattice (bohr):
+   7.5319E+00  9.5643E-02  2.2075E-06
+  -9.5636E-02  7.5320E+00 -6.4015E-07
+   2.0911E-06 -5.6562E-07  7.5326E+00
+
+
+
+ (NNDist_bin) Cell Size                  :     7.5290     7.5291     7.5292 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    89.9999 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0000   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.1887E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.1000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5161933923E+00  3.19E-04  3.25E-05  0  1.599E-14  4.39E-03/ 3.31E-02  3.93E-02/ 1.08E-01
+  2   -8.5161934061E+00  1.85E-05  7.82E-06  0  1.776E-15  4.40E-03/ 3.31E-02  3.94E-02/ 1.08E-01
+  3   -8.5161934070E+00  6.51E-06  1.72E-06  0 -3.908E-14  4.40E-03/ 3.31E-02  3.94E-02/ 1.08E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.516193407039E+00 Ha, volume= 4.2681E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:07:25
+
+
+; Cell optimization at step 15 / 100, max(stress):  0.1744E-05, total energy:  -8.5161934    ;
+stress (Ha/bohr^3):
+  -1.7441E-06 -3.7126E-10 -2.0925E-11
+  -3.7126E-10 -1.7253E-06 -2.5591E-11
+  -2.0925E-11 -2.5591E-11 -1.7212E-06
+lattice (bohr):
+   7.5284E+00  9.5600E-02  2.1701E-06
+  -9.5591E-02  7.5285E+00 -6.8662E-07
+   2.0543E-06 -6.1259E-07  7.5292E+00
+
+
+
+ (NNDist_bin) Cell Size                  :     7.5322     7.5323     7.5323 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    89.9999 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0000   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.1909E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   4.9000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5161933392E+00  2.90E-04  3.86E-05  0 -6.040E-14  4.40E-03/ 3.30E-02  3.98E-02/ 1.08E-01
+  2   -8.5161933560E+00  1.97E-05  1.07E-05  0 -1.243E-14  4.40E-03/ 3.30E-02  3.94E-02/ 1.08E-01
+  3   -8.5161933572E+00  6.82E-06  2.03E-06  0  1.243E-14  4.40E-03/ 3.30E-02  3.94E-02/ 1.08E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.516193357194E+00 Ha, volume= 4.2734E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:07:25
+
+
+; Cell optimization at step 16 / 100, max(stress):  0.1916E-05, total energy:  -8.5161934    ;
+stress (Ha/bohr^3):
+   1.9004E-06 -1.8802E-10  2.5445E-11
+  -1.8802E-10  1.9133E-06  2.5227E-11
+   2.5445E-11  2.5227E-11  1.9161E-06
+lattice (bohr):
+   7.5316E+00  9.5640E-02  2.2079E-06
+  -9.5631E-02  7.5317E+00 -6.4028E-07
+   2.0914E-06 -5.6575E-07  7.5323E+00
+
+
+
+ (NNDist_bin) Cell Size                  :     7.5313     7.5314     7.5314 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    89.9999 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0000   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.1903E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.0000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5161935644E+00  8.01E-05  8.03E-06  0  3.730E-14  4.40E-03/ 3.31E-02  3.93E-02/ 1.08E-01
+  2   -8.5161935654E+00  4.68E-06  2.34E-06  0 -1.776E-15  4.40E-03/ 3.31E-02  3.94E-02/ 1.08E-01
+  3   -8.5161935654E+00  1.68E-06  4.78E-07  0 -1.776E-15  4.40E-03/ 3.31E-02  3.94E-02/ 1.08E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.516193565426E+00 Ha, volume= 4.2720E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:07:25
+
+
+; Cell optimization at step 17 / 100, max(stress):  0.9086E-06, total energy:  -8.5161936    ;
+stress (Ha/bohr^3):
+   8.9403E-07 -1.7510E-10  1.9479E-11
+  -1.7510E-10  9.0599E-07  1.1140E-11
+   1.9479E-11  1.1140E-11  9.0857E-07
+lattice (bohr):
+   7.5307E+00  9.5629E-02  2.1964E-06
+  -9.5620E-02  7.5308E+00 -6.5169E-07
+   2.0801E-06 -5.7731E-07  7.5314E+00
+
+
+
+ (NNDist_bin) Cell Size                  :     7.5309     7.5309     7.5309 (Bohr)
+ (NNDist_bin) Angles <a,b>               :    89.9999 Degree
+ (NNDist_bin) Angles <c,a-b plane>       :     0.0000 Degree
+ (NNDist_bin) Bin Spacing                :    20.0000   20.0000   20.0000 (Bohr)
+ (NNDist_bin) Bin Number                 :      1     1     1
+ (NNDist_bin) Min Distance in Cell       :   5.1899E+00 >   2.0000E+00 (Bohr)
+ (NNDist_bin) Time Cost                  :   5.0000E-05 sec.
+
+ (RhoOptimizers) Use NTN (Truncated Newton) minimization method for density.
+ Iter    totEnergy(Ha)     Theta   potNorm  New    ele#       min/max(den)      min/max(dE/dPhi)
+  1   -8.5161936172E+00  4.55E-05  5.73E-06  0 -7.105E-15  4.40E-03/ 3.31E-02  3.93E-02/ 1.08E-01
+  2   -8.5161936176E+00  3.37E-06  1.14E-06  0  1.954E-14  4.40E-03/ 3.31E-02  3.94E-02/ 1.08E-01
+  3   -8.5161936176E+00  9.59E-07  3.43E-07  0  4.441E-14  4.40E-03/ 3.31E-02  3.94E-02/ 1.08E-01
+ Total energy converged in the last three iteration within: 1.00000E-06 Ha
+ Final total energy: -8.516193617624E+00 Ha, volume= 4.2711E+02 bohr^3, totQ=      12.0
+ Current Time : 12/01/2014 at 15:07:25
+
+
+; Cell optimization at step 18 / 100, max(stress):  0.3410E-06, total energy:  -8.5161936    ;
+stress (Ha/bohr^3):
+   3.2769E-07 -1.6169E-10  1.2615E-11
+  -1.6169E-10  3.3863E-07  4.0215E-12
+   1.2615E-11  4.0215E-12  3.4099E-07
+lattice (bohr):
+   7.5302E+00  9.5623E-02  2.1858E-06
+  -9.5614E-02  7.5303E+00 -6.5768E-07
+   2.0696E-06 -5.8343E-07  7.5309E+00
+
+
+ --------------------- END OF PROFESS, HAVE A GREAT DAY ! --------------------
+    PROFESS      :      2.06s WALL    100.00% (       1 calls)     2.06s/call
+ -----------------------------------------------------------------------------

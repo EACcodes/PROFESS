@@ -1,0 +1,1886 @@
+ ******************************************************************************
+                             WELCOME TO PROFESS                   
+            (PRinceton Orbital-Free Electronic Structure Software) 
+ ******************************************************************************
+
+ ------------------------------------------------------------------------------
+                           READ GEOMETRY
+ Cell length (Bohr)    7.314E+00   7.501E+00   7.559E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   8.852E+01
+ Volume    (Bohr^3)    4.145E+02
+
+ ------------------------------------------------------------------------------
+                           READ PSEUDOPOTENTIAL
+ Total electron number in ReadPseudo is    12.0000000000000     
+ (System) Machine Precision              :   2.220446049250313E-016
+
+ ------------------------------------------------------------------------------
+                           SETUP FFT
+ Global FFT Dimension :    16   16   16
+ Dimension of rho for this processor : 
+ xmin, xmax :            0          15
+ ymin, ymax :            0          15
+ zmin, zmax :            0          15
+ Total electron number =    12.0000000000000     
+ Uniform rhoR =   2.894820673600708E-002
+ (GB INFO) FFT size      :       16      16      16
+ (GB INFO) FFT offset    :        0
+ (GB INFO) FFT G size    :        9      16      16
+ (GB INFO) FFT G offset  :        0
+
+ ------------------------------------------------------------------------------
+                           SETUP KEDF
+ kinetic energy density functional number is            4
+ ( 1=TF, 2=VW, 3=TF+VW, 4=WT,  5=WGC,  
+   7=LQ, 8=HQ, 10=CAT,  11=HC, 12=WGCD,
+   15=GGA, 16=WGCD+GGA, 17=EVT, 18=EVC )
+ qTable dimension:     9   16   16
+ Coefficient for TF KEDF is     1.0000
+ Coefficient for VW KEDF is     1.0000
+ Coefficient for alpha in WT KEDF is     0.8333
+ Coefficient for beta  in WT KEDF is     0.8333
+ rho0 (Electron/Bohr^3) in WGC KEDF is     0.0289
+ hold0 =  F
+  dV of each real space grid is now   0.101204455485525     
+ Cell length (Bohr)    7.314E+00   7.501E+00   7.559E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   8.852E+01
+ Volume    (Bohr^3)    4.145E+02
+
+ ------------------------------------------------------------------------------
+                           SETUP EWALD 
+ (Ewald) eta                             :   0.5862    
+ (Ewald) Real Space Cutoff               :    8.582     (Bohr)
+ (Ewald) Reciprocal Cutoff               :    6.234     (1/Bohr)
+
+ ------------------------------------------------------------------------------
+                           SETUP PLANE WAVE 
+ Fill the 3D Wang-Teter kernel in G space
+
+ ------------------------------------------------------------------------------
+                           REFRESH ION POSITIONS
+  
+ Calculating Ion-Ion Energy ...                   complete.     0.002 s
+  
+ Calculating Ion-Electron Potential (spline) ... 
+ complete.     0.002 s
+
+ ------------------------------------------------------------------------------
+                           DENSITY OPTIMIZATION
+ Electron number for spin            1  is    11.9999999999991     
+ Cell Volume      :            61.427519 Angstrom^3
+ Ion number       :                    4
+ Electron number  :            12.000000
+ Ion density      :             0.065117 Ion/Angstrom^3
+ Electron density :             0.195352 Electron/Angstrom^3
+ 
+|----------------------------------------------------------------------------|
+|           Sqrt Conjugate Gradient Electronic Minimization Report           |
++----------------------------------------------------------------------------+
+| Step         Energy        Pot. Norm #LCG /#Line  line     #FFT   Time (s) |
+| number        (eV)         (in code) Steps/Steps  step    (cumul) (cumul)  |
++----------------------------------------------------------------------------+
+|     0  -2.224205733115E+02 1.11850E-01   0/  0  0.000E+00      6 9.403E-03 |
+|     1  -2.311374927723E+02 3.07912E-02   2/  1  8.639E-02     24 3.674E-02 |
+|     2  -2.316989773208E+02 6.30921E-03   8/  1  3.178E-02     78 1.102E-01 |
+|     3  -2.317102291421E+02 1.98031E-03   5/  1  2.882E-03    114 1.609E-01 |
+|     4  -2.317117591695E+02 4.55864E-04   7/  1  1.694E-03    162 2.266E-01 |
+|     5  -2.317118278762E+02 1.05109E-04   6/  1  2.384E-04    204 2.847E-01 |
+|     6  -2.317118334728E+02 2.38692E-05   8/  1  1.147E-04    258 3.581E-01 |
+|     7  -2.317118335995E+02 6.23098E-06   4/  1  7.755E-06    288 4.010E-01 |
+|                                                                            |
+|                                                   Stationary point found!  |
+| Total number of steps:                7                                    |
+| Total number of energy evals:         7                                    |
+| Total number of potential eva         7                                    |
+| Machine precision for energy:        -4.8E-14                              |
+|     Minimization time:                0.402 s                              |
++----------------------------------------------------------------------------+
+##############################################################################
+#                         Intermediate energy report                 time    #
+##############################################################################
+# Thomas-Fermi Kin. Energy =   8.990205775509E+01 eV                 0.000 s #
+# Von-Weizsacker Kin. Ener =   7.344980972680E+00 eV                 0.000 s #
+# Wang-Teter Kinetic Energ =  -2.785239973122E+00 eV                 0.000 s #
+#                                                                            #
+#     LDA Exch-Corr Energy =  -8.927974807017E+01 eV                 0.000 s #
+#         Coulombic Energy =   4.503089276774E-01 eV                 0.000 s #
+#      Ion-Electron Energy =   6.381266754054E+01 eV                 0.000 s #
+#           Ion-Ion Energy =  -3.011568607522E+02 eV                 0.000 s #
+#                                                                            #
+#     TOTAL KINETIC ENERGY =   9.446179875465E+01 eV                         #
+#   TOTAL POTENTIAL ENERGY =  -3.261736323541E+02 eV                         #
+#             TOTAL ENERGY =  -2.317118335995E+02 eV                         #
+##############################################################################
+ 
+  
+ Calculating Ion-Ion Forces ...                complete.     0.003 s
+  
+ Calculating Ion-Electron Forces (spline) ...  complete.     0.002 s                        
+  
+ Calculating Ion-Electron Stress (spline) ...  complete.     0.003 s                        
+  
+ Calculating Ion-Ion Stress ...                complete.     0.002 s
+  
+ ------------------------------------------------------------------------------
+                         LATTICE VECTORS (Angstrom)
+ LAT 1           3.869104        0.100000        0.000000
+ LAT 2           0.000000        3.969104        0.000000
+ LAT 3           0.000000        0.000000        4.000000
+ ------------------------------------------------------------------------------
+                                STRESS (GPa)
+ ST_GPa 1       -3.677074        1.093225       -0.000045
+ ST_GPa 2        1.093225       -2.627874        0.000009
+ ST_GPa 3       -0.000045        0.000009       -2.165146
+  
+ --------------------------------------------------
+ STRESS (a.u.)
+ --------------------------------------------------
+ ST_AU  1  -1.2498124302E-04   3.7157955850E-05  -1.5326624459E-09
+ ST_AU  2   3.7157955850E-05  -8.9319652534E-05   3.0937829314E-10
+ ST_AU  3  -1.5326624459E-09   3.0937829314E-10  -7.3591833100E-05
+; Cell optimization at step  1, max(stress):  0.1250E-03, total energy:  -8.5152537    ;
+  dV of each real space grid is now   0.103868043430501     
+ Cell length (Bohr)    7.398E+00   7.560E+00   7.607E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   8.894E+01
+ Volume    (Bohr^3)    4.254E+02
+  dV of each real space grid is now   0.103868043430501     
+ Cell length (Bohr)    7.398E+00   7.560E+00   7.607E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   8.894E+01
+ Volume    (Bohr^3)    4.254E+02
+
+ ------------------------------------------------------------------------------
+                           SETUP EWALD 
+ (Ewald) eta                             :   0.5809    
+ (Ewald) Real Space Cutoff               :    8.656     (Bohr)
+ (Ewald) Reciprocal Cutoff               :    6.195     (1/Bohr)
+
+ ------------------------------------------------------------------------------
+                           SETUP PLANE WAVE 
+ Fill the 3D Wang-Teter kernel in G space
+
+ ------------------------------------------------------------------------------
+                           REFRESH ION POSITIONS
+  
+ Calculating Ion-Ion Energy ...                   complete.     0.002 s
+  
+ Calculating Ion-Electron Potential (spline) ... 
+ complete.     0.002 s
+ Rescale the total density from   1.279221 to         12
+
+ ------------------------------------------------------------------------------
+                           DENSITY OPTIMIZATION
+ Electron number for spin            1  is    12.0000000000000     
+ Cell Volume      :            63.044222 Angstrom^3
+ Ion number       :                    4
+ Electron number  :            12.000000
+ Ion density      :             0.063448 Ion/Angstrom^3
+ Electron density :             0.190343 Electron/Angstrom^3
+ 
+|----------------------------------------------------------------------------|
+|           Sqrt Conjugate Gradient Electronic Minimization Report           |
++----------------------------------------------------------------------------+
+| Step         Energy        Pot. Norm #LCG /#Line  line     #FFT   Time (s) |
+| number        (eV)         (in code) Steps/Steps  step    (cumul) (cumul)  |
++----------------------------------------------------------------------------+
+|     0  -2.317146335241E+02 3.06746E-03   0/  0  0.000E+00    310 8.939E-03 |
+|     1  -2.317313411042E+02 7.59009E-04   6/  1  6.242E-03    352 6.648E-02 |
+|     2  -2.317315134612E+02 1.73012E-04   6/  1  4.159E-04    394 1.246E-01 |
+|     3  -2.317315341290E+02 4.39588E-05   8/  1  2.283E-04    448 1.981E-01 |
+|     4  -2.317315347744E+02 1.37416E-05   4/  1  2.146E-05    478 2.329E-01 |
+|                                                                            |
+|                                                   Stationary point found!  |
+| Total number of steps:                4                                    |
+| Total number of energy evals:         4                                    |
+| Total number of potential eva         4                                    |
+| Machine precision for energy:        -4.8E-14                              |
+|     Minimization time:                0.234 s                              |
++----------------------------------------------------------------------------+
+##############################################################################
+#                         Intermediate energy report                 time    #
+##############################################################################
+# Thomas-Fermi Kin. Energy =   8.833273275750E+01 eV                 0.000 s #
+# Von-Weizsacker Kin. Ener =   7.260224301263E+00 eV                 0.000 s #
+# Wang-Teter Kinetic Energ =  -2.679212257492E+00 eV                 0.000 s #
+#                                                                            #
+#     LDA Exch-Corr Energy =  -8.856859548070E+01 eV                 0.000 s #
+#         Coulombic Energy =   4.257011730011E-01 eV                 0.000 s #
+#      Ion-Electron Energy =   6.206940216284E+01 eV                 0.000 s #
+#           Ion-Ion Energy =  -2.985717874308E+02 eV                 0.000 s #
+#                                                                            #
+#     TOTAL KINETIC ENERGY =   9.291374480127E+01 eV                         #
+#   TOTAL POTENTIAL ENERGY =  -3.246452795757E+02 eV                         #
+#             TOTAL ENERGY =  -2.317315347744E+02 eV                         #
+##############################################################################
+ 
+  
+ Calculating Ion-Ion Forces ...                complete.     0.001 s
+  
+ Calculating Ion-Electron Forces (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Electron Stress (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Ion Stress ...                complete.     0.001 s
+  
+ ------------------------------------------------------------------------------
+                         LATTICE VECTORS (Angstrom)
+ LAT 1           3.914101        0.086622        0.000001
+ LAT 2          -0.014174        4.000789       -0.000000
+ LAT 3           0.000001       -0.000000        4.025628
+ ------------------------------------------------------------------------------
+                                STRESS (GPa)
+ ST_GPa 1       -1.016759        0.668394       -0.000009
+ ST_GPa 2        0.668394       -0.215039        0.000022
+ ST_GPa 3       -0.000009        0.000022        0.079080
+  
+ --------------------------------------------------
+ STRESS (a.u.)
+ --------------------------------------------------
+ ST_AU  1  -3.4558927959E-05   2.2718269565E-05  -3.1676133395E-10
+ ST_AU  2   2.2718269565E-05  -7.3090127340E-06   7.3507457246E-10
+ ST_AU  3  -3.1676133395E-10   7.3507457246E-10   2.6878865342E-06
+; Cell optimization at step  2, max(stress):  0.3456E-04, total energy:  -8.5159777    ;
+  dV of each real space grid is now   0.104330784311613     
+ Cell length (Bohr)    7.427E+00   7.567E+00   7.605E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   8.923E+01
+ Volume    (Bohr^3)    4.273E+02
+  dV of each real space grid is now   0.104330784311613     
+ Cell length (Bohr)    7.427E+00   7.567E+00   7.605E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   8.923E+01
+ Volume    (Bohr^3)    4.273E+02
+
+ ------------------------------------------------------------------------------
+                           SETUP EWALD 
+ (Ewald) eta                             :   0.5809    
+ (Ewald) Real Space Cutoff               :    8.656     (Bohr)
+ (Ewald) Reciprocal Cutoff               :    6.196     (1/Bohr)
+
+ ------------------------------------------------------------------------------
+                           SETUP PLANE WAVE 
+ Fill the 3D Wang-Teter kernel in G space
+
+ ------------------------------------------------------------------------------
+                           REFRESH ION POSITIONS
+  
+ Calculating Ion-Ion Energy ...                   complete.     0.001 s
+  
+ Calculating Ion-Electron Potential (spline) ... 
+ complete.     0.001 s
+ Rescale the total density from   1.257547 to         12
+
+ ------------------------------------------------------------------------------
+                           DENSITY OPTIMIZATION
+ Electron number for spin            1  is    12.0000000000000     
+ Cell Volume      :            63.325090 Angstrom^3
+ Ion number       :                    4
+ Electron number  :            12.000000
+ Ion density      :             0.063166 Ion/Angstrom^3
+ Electron density :             0.189498 Electron/Angstrom^3
+ 
+|----------------------------------------------------------------------------|
+|           Sqrt Conjugate Gradient Electronic Minimization Report           |
++----------------------------------------------------------------------------+
+| Step         Energy        Pot. Norm #LCG /#Line  line     #FFT   Time (s) |
+| number        (eV)         (in code) Steps/Steps  step    (cumul) (cumul)  |
++----------------------------------------------------------------------------+
+|     0  -2.317324527776E+02 9.44520E-04   0/  0  0.000E+00    500 3.273E-03 |
+|     1  -2.317338433044E+02 2.88968E-04   7/  1  1.816E-03    548 2.697E-02 |
+|     2  -2.317338714420E+02 8.94402E-05   6/  1  1.746E-04    590 4.817E-02 |
+|     3  -2.317338748422E+02 1.61815E-05   8/  1  8.797E-05    644 7.490E-02 |
+|     4  -2.317338749289E+02 4.15003E-06   5/  1  8.620E-06    680 9.333E-02 |
+|                                                                            |
+|                                                   Stationary point found!  |
+| Total number of steps:                4                                    |
+| Total number of energy evals:         4                                    |
+| Total number of potential eva         4                                    |
+| Machine precision for energy:        -4.8E-14                              |
+|     Minimization time:                0.094 s                              |
++----------------------------------------------------------------------------+
+##############################################################################
+#                         Intermediate energy report                 time    #
+##############################################################################
+# Thomas-Fermi Kin. Energy =   8.806592719905E+01 eV                 0.000 s #
+# Von-Weizsacker Kin. Ener =   7.243972699797E+00 eV                 0.000 s #
+# Wang-Teter Kinetic Energ =  -2.659347278040E+00 eV                 0.000 s #
+#                                                                            #
+#     LDA Exch-Corr Energy =  -8.844715720130E+01 eV                 0.000 s #
+#         Coulombic Energy =   4.210481467918E-01 eV                 0.000 s #
+#      Ion-Electron Energy =   6.177739147378E+01 eV                 0.000 s #
+#           Ion-Ion Energy =  -2.981357099689E+02 eV                 0.000 s #
+#                                                                            #
+#     TOTAL KINETIC ENERGY =   9.265055262081E+01 eV                         #
+#   TOTAL POTENTIAL ENERGY =  -3.243844275497E+02 eV                         #
+#             TOTAL ENERGY =  -2.317338749289E+02 eV                         #
+##############################################################################
+ 
+  
+ Calculating Ion-Ion Forces ...                complete.     0.001 s
+  
+ Calculating Ion-Electron Forces (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Electron Stress (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Ion Stress ...                complete.     0.001 s
+  
+ ------------------------------------------------------------------------------
+                         LATTICE VECTORS (Angstrom)
+ LAT 1           3.929212        0.076677        0.000001
+ LAT 2          -0.024243        4.004138       -0.000000
+ LAT 3           0.000001       -0.000000        4.024482
+ ------------------------------------------------------------------------------
+                                STRESS (GPa)
+ ST_GPa 1       -0.506661        0.467292       -0.000004
+ ST_GPa 2        0.467292        0.173406        0.000017
+ ST_GPa 3       -0.000004        0.000017        0.392567
+  
+ --------------------------------------------------
+ STRESS (a.u.)
+ --------------------------------------------------
+ ST_AU  1  -1.7221068879E-05   1.5882948231E-05  -1.5034187972E-10
+ ST_AU  2   1.5882948231E-05   5.8939539821E-06   5.6932758074E-10
+ ST_AU  3  -1.5034187972E-10   5.6932758074E-10   1.3343083652E-05
+; Cell optimization at step  3, max(stress):  0.1722E-04, total energy:  -8.5160637    ;
+  dV of each real space grid is now   0.104319168634108     
+ Cell length (Bohr)    7.443E+00   7.562E+00   7.592E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   8.947E+01
+ Volume    (Bohr^3)    4.273E+02
+  dV of each real space grid is now   0.104319168634108     
+ Cell length (Bohr)    7.443E+00   7.562E+00   7.592E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   8.947E+01
+ Volume    (Bohr^3)    4.273E+02
+
+ ------------------------------------------------------------------------------
+                           SETUP EWALD 
+ (Ewald) eta                             :   0.5862    
+ (Ewald) Real Space Cutoff               :    8.577     (Bohr)
+ (Ewald) Reciprocal Cutoff               :    6.207     (1/Bohr)
+
+ ------------------------------------------------------------------------------
+                           SETUP PLANE WAVE 
+ Fill the 3D Wang-Teter kernel in G space
+
+ ------------------------------------------------------------------------------
+                           REFRESH ION POSITIONS
+  
+ Calculating Ion-Ion Energy ...                   complete.     0.001 s
+  
+ Calculating Ion-Electron Potential (spline) ... 
+ complete.     0.001 s
+ Rescale the total density from   1.251691 to         12
+
+ ------------------------------------------------------------------------------
+                           DENSITY OPTIMIZATION
+ Electron number for spin            1  is    12.0000000000001     
+ Cell Volume      :            63.318039 Angstrom^3
+ Ion number       :                    4
+ Electron number  :            12.000000
+ Ion density      :             0.063173 Ion/Angstrom^3
+ Electron density :             0.189519 Electron/Angstrom^3
+ 
+|----------------------------------------------------------------------------|
+|           Sqrt Conjugate Gradient Electronic Minimization Report           |
++----------------------------------------------------------------------------+
+| Step         Energy        Pot. Norm #LCG /#Line  line     #FFT   Time (s) |
+| number        (eV)         (in code) Steps/Steps  step    (cumul) (cumul)  |
++----------------------------------------------------------------------------+
+|     0  -2.317345090113E+02 7.07821E-04   0/  0  0.000E+00    702 3.245E-03 |
+|     1  -2.317352297813E+02 1.75669E-04   8/  1  1.334E-03    756 2.975E-02 |
+|     2  -2.317352377105E+02 5.27233E-05   5/  1  7.504E-05    792 4.810E-02 |
+|     3  -2.317352385169E+02 1.30279E-05   7/  1  3.386E-05    840 7.213E-02 |
+|                                                                            |
+|                                                   Stationary point found!  |
+| Total number of steps:                3                                    |
+| Total number of energy evals:         3                                    |
+| Total number of potential eva         3                                    |
+| Machine precision for energy:        -4.8E-14                              |
+|     Minimization time:                0.073 s                              |
++----------------------------------------------------------------------------+
+##############################################################################
+#                         Intermediate energy report                 time    #
+##############################################################################
+# Thomas-Fermi Kin. Energy =   8.807080662076E+01 eV                 0.000 s #
+# Von-Weizsacker Kin. Ener =   7.240091428914E+00 eV                 0.000 s #
+# Wang-Teter Kinetic Energ =  -2.656591037319E+00 eV                 0.000 s #
+#                                                                            #
+#     LDA Exch-Corr Energy =  -8.844957439188E+01 eV                 0.000 s #
+#         Coulombic Energy =   4.203648866185E-01 eV                 0.000 s #
+#      Ion-Electron Energy =   6.179011173378E+01 eV                 0.000 s #
+#           Ion-Ion Energy =  -2.981504477578E+02 eV                 0.000 s #
+#                                                                            #
+#     TOTAL KINETIC ENERGY =   9.265430701235E+01 eV                         #
+#   TOTAL POTENTIAL ENERGY =  -3.243895455292E+02 eV                         #
+#             TOTAL ENERGY =  -2.317352385169E+02 eV                         #
+##############################################################################
+ 
+  
+ Calculating Ion-Ion Forces ...                complete.     0.001 s
+  
+ Calculating Ion-Electron Forces (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Electron Stress (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Ion Stress ...                complete.     0.001 s
+  
+ ------------------------------------------------------------------------------
+                         LATTICE VECTORS (Angstrom)
+ LAT 1           3.938223        0.068300        0.000001
+ LAT 2          -0.032618        4.001255       -0.000001
+ LAT 3           0.000001       -0.000001        4.017627
+ ------------------------------------------------------------------------------
+                                STRESS (GPa)
+ ST_GPa 1       -0.413006        0.309650       -0.000005
+ ST_GPa 2        0.309650        0.159484        0.000009
+ ST_GPa 3       -0.000005        0.000009        0.324790
+  
+ --------------------------------------------------
+ STRESS (a.u.)
+ --------------------------------------------------
+ ST_AU  1  -1.4037800415E-05   1.0524799824E-05  -1.6020762548E-10
+ ST_AU  2   1.0524799824E-05   5.4207424955E-06   3.0756611650E-10
+ ST_AU  3  -1.6020762548E-10   3.0756611650E-10   1.1039377093E-05
+; Cell optimization at step  4, max(stress):  0.1404E-04, total energy:  -8.5161138    ;
+  dV of each real space grid is now   0.104291103635754     
+ Cell length (Bohr)    7.460E+00   7.556E+00   7.579E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   8.967E+01
+ Volume    (Bohr^3)    4.272E+02
+  dV of each real space grid is now   0.104291103635754     
+ Cell length (Bohr)    7.460E+00   7.556E+00   7.579E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   8.967E+01
+ Volume    (Bohr^3)    4.272E+02
+
+ ------------------------------------------------------------------------------
+                           SETUP EWALD 
+ (Ewald) eta                             :   0.5862    
+ (Ewald) Real Space Cutoff               :    8.577     (Bohr)
+ (Ewald) Reciprocal Cutoff               :    6.217     (1/Bohr)
+
+ ------------------------------------------------------------------------------
+                           SETUP PLANE WAVE 
+ Fill the 3D Wang-Teter kernel in G space
+
+ ------------------------------------------------------------------------------
+                           REFRESH ION POSITIONS
+  
+ Calculating Ion-Ion Energy ...                   complete.     0.001 s
+  
+ Calculating Ion-Electron Potential (spline) ... 
+ complete.     0.001 s
+ Rescale the total density from   1.251157 to         12
+
+ ------------------------------------------------------------------------------
+                           DENSITY OPTIMIZATION
+ Electron number for spin            1  is    12.0000000000000     
+ Cell Volume      :            63.301005 Angstrom^3
+ Ion number       :                    4
+ Electron number  :            12.000000
+ Ion density      :             0.063190 Ion/Angstrom^3
+ Electron density :             0.189570 Electron/Angstrom^3
+ 
+|----------------------------------------------------------------------------|
+|           Sqrt Conjugate Gradient Electronic Minimization Report           |
++----------------------------------------------------------------------------+
+| Step         Energy        Pot. Norm #LCG /#Line  line     #FFT   Time (s) |
+| number        (eV)         (in code) Steps/Steps  step    (cumul) (cumul)  |
++----------------------------------------------------------------------------+
+|     0  -2.317356116306E+02 6.25105E-04   0/  0  0.000E+00    862 3.248E-03 |
+|     1  -2.317361417469E+02 1.78796E-04   8/  1  1.113E-03    916 2.977E-02 |
+|     2  -2.317361493207E+02 4.70715E-05   5/  1  7.053E-05    952 4.814E-02 |
+|     3  -2.317361503436E+02 1.17968E-05   7/  1  4.090E-05   1000 7.212E-02 |
+|                                                                            |
+|                                                   Stationary point found!  |
+| Total number of steps:                3                                    |
+| Total number of energy evals:         3                                    |
+| Total number of potential eva         3                                    |
+| Machine precision for energy:        -4.8E-14                              |
+|     Minimization time:                0.073 s                              |
++----------------------------------------------------------------------------+
+##############################################################################
+#                         Intermediate energy report                 time    #
+##############################################################################
+# Thomas-Fermi Kin. Energy =   8.808585604232E+01 eV                 0.000 s #
+# Von-Weizsacker Kin. Ener =   7.238195037797E+00 eV                 0.000 s #
+# Wang-Teter Kinetic Energ =  -2.655703684463E+00 eV                 0.000 s #
+#                                                                            #
+#     LDA Exch-Corr Energy =  -8.845655021416E+01 eV                 0.000 s #
+#         Coulombic Energy =   4.202198173883E-01 eV                 0.000 s #
+#      Ion-Electron Energy =   6.181111792448E+01 eV                 0.000 s #
+#           Ion-Ion Energy =  -2.981792852670E+02 eV                 0.000 s #
+#                                                                            #
+#     TOTAL KINETIC ENERGY =   9.266834739565E+01 eV                         #
+#   TOTAL POTENTIAL ENERGY =  -3.244044977393E+02 eV                         #
+#             TOTAL ENERGY =  -2.317361503436E+02 eV                         #
+##############################################################################
+ 
+  
+ Calculating Ion-Ion Forces ...                complete.     0.001 s
+  
+ Calculating Ion-Electron Forces (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Electron Stress (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Ion Stress ...                complete.     0.001 s
+  
+ ------------------------------------------------------------------------------
+                         LATTICE VECTORS (Angstrom)
+ LAT 1           3.947012        0.061643        0.000001
+ LAT 2          -0.039295        3.998007       -0.000001
+ LAT 3           0.000001       -0.000001        4.010809
+ ------------------------------------------------------------------------------
+                                STRESS (GPa)
+ ST_GPa 1       -0.340285        0.188973       -0.000004
+ ST_GPa 2        0.188973        0.123808        0.000003
+ ST_GPa 3       -0.000004        0.000003        0.246902
+  
+ --------------------------------------------------
+ STRESS (a.u.)
+ --------------------------------------------------
+ ST_AU  1  -1.1566041144E-05   6.4230507651E-06  -1.4800545642E-10
+ ST_AU  2   6.4230507651E-06   4.2081557365E-06   9.5885759886E-11
+ ST_AU  3  -1.4800545642E-10   9.5885759886E-11   8.3920331410E-06
+; Cell optimization at step  5, max(stress):  0.1157E-04, total energy:  -8.5161473    ;
+  dV of each real space grid is now   0.104278714779471     
+ Cell length (Bohr)    7.476E+00   7.550E+00   7.568E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   8.981E+01
+ Volume    (Bohr^3)    4.271E+02
+  dV of each real space grid is now   0.104278714779471     
+ Cell length (Bohr)    7.476E+00   7.550E+00   7.568E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   8.981E+01
+ Volume    (Bohr^3)    4.271E+02
+
+ ------------------------------------------------------------------------------
+                           SETUP EWALD 
+ (Ewald) eta                             :   0.5862    
+ (Ewald) Real Space Cutoff               :    8.577     (Bohr)
+ (Ewald) Reciprocal Cutoff               :    6.227     (1/Bohr)
+
+ ------------------------------------------------------------------------------
+                           SETUP PLANE WAVE 
+ Fill the 3D Wang-Teter kernel in G space
+
+ ------------------------------------------------------------------------------
+                           REFRESH ION POSITIONS
+  
+ Calculating Ion-Ion Energy ...                   complete.     0.001 s
+  
+ Calculating Ion-Electron Potential (spline) ... 
+ complete.     0.001 s
+ Rescale the total density from   1.251196 to         12
+
+ ------------------------------------------------------------------------------
+                           DENSITY OPTIMIZATION
+ Electron number for spin            1  is    11.9999999999999     
+ Cell Volume      :            63.293485 Angstrom^3
+ Ion number       :                    4
+ Electron number  :            12.000000
+ Ion density      :             0.063198 Ion/Angstrom^3
+ Electron density :             0.189593 Electron/Angstrom^3
+ 
+|----------------------------------------------------------------------------|
+|           Sqrt Conjugate Gradient Electronic Minimization Report           |
++----------------------------------------------------------------------------+
+| Step         Energy        Pot. Norm #LCG /#Line  line     #FFT   Time (s) |
+| number        (eV)         (in code) Steps/Steps  step    (cumul) (cumul)  |
++----------------------------------------------------------------------------+
+|     0  -2.317363607820E+02 5.35050E-04   0/  0  0.000E+00   1022 3.248E-03 |
+|     1  -2.317367221916E+02 1.49681E-04   8/  1  8.895E-04   1076 2.977E-02 |
+|     2  -2.317367280813E+02 4.23227E-05   5/  1  6.230E-05   1112 4.814E-02 |
+|     3  -2.317367289711E+02 1.06582E-05   7/  1  3.991E-05   1160 7.207E-02 |
+|                                                                            |
+|                                                   Stationary point found!  |
+| Total number of steps:                3                                    |
+| Total number of energy evals:         3                                    |
+| Total number of potential eva         3                                    |
+| Machine precision for energy:        -4.8E-14                              |
+|     Minimization time:                0.073 s                              |
++----------------------------------------------------------------------------+
+##############################################################################
+#                         Intermediate energy report                 time    #
+##############################################################################
+# Thomas-Fermi Kin. Energy =   8.809250349086E+01 eV                 0.000 s #
+# Von-Weizsacker Kin. Ener =   7.237076557937E+00 eV                 0.000 s #
+# Wang-Teter Kinetic Energ =  -2.655184524901E+00 eV                 0.000 s #
+#                                                                            #
+#     LDA Exch-Corr Energy =  -8.845963461978E+01 eV                 0.000 s #
+#         Coulombic Energy =   4.202078095324E-01 eV                 0.000 s #
+#      Ion-Electron Energy =   6.182047969531E+01 eV                 0.000 s #
+#           Ion-Ion Energy =  -2.981921773801E+02 eV                 0.000 s #
+#                                                                            #
+#     TOTAL KINETIC ENERGY =   9.267439552390E+01 eV                         #
+#   TOTAL POTENTIAL ENERGY =  -3.244111244950E+02 eV                         #
+#             TOTAL ENERGY =  -2.317367289711E+02 eV                         #
+##############################################################################
+ 
+  
+ Calculating Ion-Ion Forces ...                complete.     0.001 s
+  
+ Calculating Ion-Electron Forces (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Electron Stress (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Ion Stress ...                complete.     0.001 s
+  
+ ------------------------------------------------------------------------------
+                         LATTICE VECTORS (Angstrom)
+ LAT 1           3.955685        0.056768        0.000001
+ LAT 2          -0.044210        3.994949       -0.000001
+ LAT 3           0.000001       -0.000001        4.004581
+ ------------------------------------------------------------------------------
+                                STRESS (GPa)
+ ST_GPa 1       -0.262478        0.103285       -0.000003
+ ST_GPa 2        0.103285        0.095309       -0.000001
+ ST_GPa 3       -0.000003       -0.000001        0.184505
+  
+ --------------------------------------------------
+ STRESS (a.u.)
+ --------------------------------------------------
+ ST_AU  1  -8.9214594546E-06   3.5105806880E-06  -1.0443538320E-10
+ ST_AU  2   3.5105806880E-06   3.2394734061E-06  -3.8632806379E-11
+ ST_AU  3  -1.0443538320E-10  -3.8632806379E-11   6.2711969888E-06
+; Cell optimization at step  6, max(stress):  0.8921E-05, total energy:  -8.5161686    ;
+  dV of each real space grid is now   0.104269902695044     
+ Cell length (Bohr)    7.491E+00   7.545E+00   7.557E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   8.991E+01
+ Volume    (Bohr^3)    4.271E+02
+  dV of each real space grid is now   0.104269902695044     
+ Cell length (Bohr)    7.491E+00   7.545E+00   7.557E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   8.991E+01
+ Volume    (Bohr^3)    4.271E+02
+
+ ------------------------------------------------------------------------------
+                           SETUP EWALD 
+ (Ewald) eta                             :   0.5862    
+ (Ewald) Real Space Cutoff               :    8.577     (Bohr)
+ (Ewald) Reciprocal Cutoff               :    6.236     (1/Bohr)
+
+ ------------------------------------------------------------------------------
+                           SETUP PLANE WAVE 
+ Fill the 3D Wang-Teter kernel in G space
+
+ ------------------------------------------------------------------------------
+                           REFRESH ION POSITIONS
+  
+ Calculating Ion-Ion Energy ...                   complete.     0.001 s
+  
+ Calculating Ion-Electron Potential (spline) ... 
+ complete.     0.001 s
+ Rescale the total density from   1.251133 to         12
+
+ ------------------------------------------------------------------------------
+                           DENSITY OPTIMIZATION
+ Electron number for spin            1  is    11.9999999999999     
+ Cell Volume      :            63.288137 Angstrom^3
+ Ion number       :                    4
+ Electron number  :            12.000000
+ Ion density      :             0.063203 Ion/Angstrom^3
+ Electron density :             0.189609 Electron/Angstrom^3
+ 
+|----------------------------------------------------------------------------|
+|           Sqrt Conjugate Gradient Electronic Minimization Report           |
++----------------------------------------------------------------------------+
+| Step         Energy        Pot. Norm #LCG /#Line  line     #FFT   Time (s) |
+| number        (eV)         (in code) Steps/Steps  step    (cumul) (cumul)  |
++----------------------------------------------------------------------------+
+|     0  -2.317368387695E+02 4.45386E-04   0/  0  0.000E+00   1182 3.276E-03 |
+|     1  -2.317370707426E+02 1.27172E-04   8/  1  6.869E-04   1236 2.972E-02 |
+|     2  -2.317370745760E+02 3.38090E-05   5/  1  5.049E-05   1272 4.815E-02 |
+|     3  -2.317370751914E+02 9.70308E-06   7/  1  3.404E-05   1320 7.204E-02 |
+|                                                                            |
+|                                                   Stationary point found!  |
+| Total number of steps:                3                                    |
+| Total number of energy evals:         3                                    |
+| Total number of potential eva         3                                    |
+| Machine precision for energy:        -4.8E-14                              |
+|     Minimization time:                0.073 s                              |
++----------------------------------------------------------------------------+
+##############################################################################
+#                         Intermediate energy report                 time    #
+##############################################################################
+# Thomas-Fermi Kin. Energy =   8.809737387588E+01 eV                 0.000 s #
+# Von-Weizsacker Kin. Ener =   7.236542567552E+00 eV                 0.000 s #
+# Wang-Teter Kinetic Energ =  -2.655037200036E+00 eV                 0.000 s #
+#                                                                            #
+#     LDA Exch-Corr Energy =  -8.846187886701E+01 eV                 0.000 s #
+#         Coulombic Energy =   4.202761453300E-01 eV                 0.000 s #
+#      Ion-Electron Energy =   6.182673795411E+01 eV                 0.000 s #
+#           Ion-Ion Energy =  -2.982010896673E+02 eV                 0.000 s #
+#                                                                            #
+#     TOTAL KINETIC ENERGY =   9.267887924340E+01 eV                         #
+#   TOTAL POTENTIAL ENERGY =  -3.244159544348E+02 eV                         #
+#             TOTAL ENERGY =  -2.317370751914E+02 eV                         #
+##############################################################################
+ 
+  
+ Calculating Ion-Ion Forces ...                complete.     0.001 s
+  
+ Calculating Ion-Electron Forces (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Electron Stress (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Ion Stress ...                complete.     0.001 s
+  
+ ------------------------------------------------------------------------------
+                         LATTICE VECTORS (Angstrom)
+ LAT 1           3.963704        0.053567        0.000001
+ LAT 2          -0.047463        3.992099       -0.000001
+ LAT 3           0.000001       -0.000001        3.998988
+ ------------------------------------------------------------------------------
+                                STRESS (GPa)
+ ST_GPa 1       -0.191211        0.048593       -0.000002
+ ST_GPa 2        0.048593        0.067779       -0.000003
+ ST_GPa 3       -0.000002       -0.000003        0.129581
+  
+ --------------------------------------------------
+ STRESS (a.u.)
+ --------------------------------------------------
+ ST_AU  1  -6.4991378684E-06   1.6516511193E-06  -6.2123030795E-11
+ ST_AU  2   1.6516511193E-06   2.3037527406E-06  -1.1691964163E-10
+ ST_AU  3  -6.2123030795E-11  -1.1691964163E-10   4.4043818727E-06
+; Cell optimization at step  7, max(stress):  0.6499E-05, total energy:  -8.5161813    ;
+  dV of each real space grid is now   0.104266930912565     
+ Cell length (Bohr)    7.504E+00   7.540E+00   7.548E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   8.996E+01
+ Volume    (Bohr^3)    4.271E+02
+  dV of each real space grid is now   0.104266930912565     
+ Cell length (Bohr)    7.504E+00   7.540E+00   7.548E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   8.996E+01
+ Volume    (Bohr^3)    4.271E+02
+
+ ------------------------------------------------------------------------------
+                           SETUP EWALD 
+ (Ewald) eta                             :   0.5862    
+ (Ewald) Real Space Cutoff               :    8.577     (Bohr)
+ (Ewald) Reciprocal Cutoff               :    6.243     (1/Bohr)
+
+ ------------------------------------------------------------------------------
+                           SETUP PLANE WAVE 
+ Fill the 3D Wang-Teter kernel in G space
+
+ ------------------------------------------------------------------------------
+                           REFRESH ION POSITIONS
+  
+ Calculating Ion-Ion Energy ...                   complete.     0.001 s
+  
+ Calculating Ion-Electron Potential (spline) ... 
+ complete.     0.001 s
+ Rescale the total density from   1.251168 to         12
+
+ ------------------------------------------------------------------------------
+                           DENSITY OPTIMIZATION
+ Electron number for spin            1  is    11.9999999999999     
+ Cell Volume      :            63.286333 Angstrom^3
+ Ion number       :                    4
+ Electron number  :            12.000000
+ Ion density      :             0.063205 Ion/Angstrom^3
+ Electron density :             0.189614 Electron/Angstrom^3
+ 
+|----------------------------------------------------------------------------|
+|           Sqrt Conjugate Gradient Electronic Minimization Report           |
++----------------------------------------------------------------------------+
+| Step         Energy        Pot. Norm #LCG /#Line  line     #FFT   Time (s) |
+| number        (eV)         (in code) Steps/Steps  step    (cumul) (cumul)  |
++----------------------------------------------------------------------------+
+|     0  -2.317371226943E+02 3.58920E-04   0/  0  0.000E+00   1342 3.283E-03 |
+|     1  -2.317372631032E+02 9.54003E-05   8/  1  5.127E-04   1396 2.979E-02 |
+|     2  -2.317372656789E+02 2.98804E-05   5/  1  4.184E-05   1432 4.821E-02 |
+|     3  -2.317372661588E+02 8.48691E-06   7/  1  3.150E-05   1480 7.227E-02 |
+|                                                                            |
+|                                                   Stationary point found!  |
+| Total number of steps:                3                                    |
+| Total number of energy evals:         3                                    |
+| Total number of potential eva         3                                    |
+| Machine precision for energy:        -4.8E-14                              |
+|     Minimization time:                0.073 s                              |
++----------------------------------------------------------------------------+
+##############################################################################
+#                         Intermediate energy report                 time    #
+##############################################################################
+# Thomas-Fermi Kin. Energy =   8.809902695777E+01 eV                 0.000 s #
+# Von-Weizsacker Kin. Ener =   7.236254004513E+00 eV                 0.000 s #
+# Wang-Teter Kinetic Energ =  -2.654945361942E+00 eV                 0.000 s #
+#                                                                            #
+#     LDA Exch-Corr Energy =  -8.846264111307E+01 eV                 0.000 s #
+#         Coulombic Energy =   4.203280058997E-01 eV                 0.000 s #
+#      Ion-Electron Energy =   6.182886049724E+01 eV                 0.000 s #
+#           Ion-Ion Energy =  -2.982041491492E+02 eV                 0.000 s #
+#                                                                            #
+#     TOTAL KINETIC ENERGY =   9.268033560034E+01 eV                         #
+#   TOTAL POTENTIAL ENERGY =  -3.244176017591E+02 eV                         #
+#             TOTAL ENERGY =  -2.317372661588E+02 eV                         #
+##############################################################################
+ 
+  
+ Calculating Ion-Ion Forces ...                complete.     0.001 s
+  
+ Calculating Ion-Electron Forces (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Electron Stress (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Ion Stress ...                complete.     0.001 s
+  
+ ------------------------------------------------------------------------------
+                         LATTICE VECTORS (Angstrom)
+ LAT 1           3.970708        0.051752        0.000001
+ LAT 2          -0.049330        3.989650       -0.000001
+ LAT 3           0.000001       -0.000001        3.994268
+ ------------------------------------------------------------------------------
+                                STRESS (GPa)
+ ST_GPa 1       -0.126691        0.018304       -0.000001
+ ST_GPa 2        0.018304        0.045736       -0.000004
+ ST_GPa 3       -0.000001       -0.000004        0.085622
+  
+ --------------------------------------------------
+ STRESS (a.u.)
+ --------------------------------------------------
+ ST_AU  1  -4.3061520412E-06   6.2214274703E-07  -1.9731577555E-11
+ ST_AU  2   6.2214274703E-07   1.5545514788E-06  -1.2381217728E-10
+ ST_AU  3  -1.9731577555E-11  -1.2381217728E-10   2.9102310741E-06
+; Cell optimization at step  8, max(stress):  0.4306E-05, total energy:  -8.5161883    ;
+  dV of each real space grid is now   0.104263044608375     
+ Cell length (Bohr)    7.515E+00   7.536E+00   7.541E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   8.999E+01
+ Volume    (Bohr^3)    4.271E+02
+  dV of each real space grid is now   0.104263044608375     
+ Cell length (Bohr)    7.515E+00   7.536E+00   7.541E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   8.999E+01
+ Volume    (Bohr^3)    4.271E+02
+
+ ------------------------------------------------------------------------------
+                           SETUP EWALD 
+ (Ewald) eta                             :   0.5862    
+ (Ewald) Real Space Cutoff               :    8.577     (Bohr)
+ (Ewald) Reciprocal Cutoff               :    6.249     (1/Bohr)
+
+ ------------------------------------------------------------------------------
+                           SETUP PLANE WAVE 
+ Fill the 3D Wang-Teter kernel in G space
+
+ ------------------------------------------------------------------------------
+                           REFRESH ION POSITIONS
+  
+ Calculating Ion-Ion Energy ...                   complete.     0.001 s
+  
+ Calculating Ion-Electron Potential (spline) ... 
+ complete.     0.001 s
+ Rescale the total density from   1.251110 to         12
+
+ ------------------------------------------------------------------------------
+                           DENSITY OPTIMIZATION
+ Electron number for spin            1  is    12.0000000000000     
+ Cell Volume      :            63.283974 Angstrom^3
+ Ion number       :                    4
+ Electron number  :            12.000000
+ Ion density      :             0.063207 Ion/Angstrom^3
+ Electron density :             0.189621 Electron/Angstrom^3
+ 
+|----------------------------------------------------------------------------|
+|           Sqrt Conjugate Gradient Electronic Minimization Report           |
++----------------------------------------------------------------------------+
+| Step         Energy        Pot. Norm #LCG /#Line  line     #FFT   Time (s) |
+| number        (eV)         (in code) Steps/Steps  step    (cumul) (cumul)  |
++----------------------------------------------------------------------------+
+|     0  -2.317372783447E+02 2.75113E-04   0/  0  0.000E+00   1502 3.244E-03 |
+|     1  -2.317373572321E+02 7.57755E-05   8/  1  3.742E-04   1556 2.976E-02 |
+|     2  -2.317373586529E+02 2.12173E-05   5/  1  3.110E-05   1592 4.814E-02 |
+|     3  -2.317373589383E+02 4.89042E-06   8/  1  2.565E-05   1646 7.487E-02 |
+|                                                                            |
+|                                                   Stationary point found!  |
+| Total number of steps:                3                                    |
+| Total number of energy evals:         3                                    |
+| Total number of potential eva         3                                    |
+| Machine precision for energy:        -4.8E-14                              |
+|     Minimization time:                0.075 s                              |
++----------------------------------------------------------------------------+
+##############################################################################
+#                         Intermediate energy report                 time    #
+##############################################################################
+# Thomas-Fermi Kin. Energy =   8.810122932858E+01 eV                 0.000 s #
+# Von-Weizsacker Kin. Ener =   7.236174481559E+00 eV                 0.000 s #
+# Wang-Teter Kinetic Energ =  -2.654989827939E+00 eV                 0.000 s #
+#                                                                            #
+#     LDA Exch-Corr Energy =  -8.846364942127E+01 eV                 0.000 s #
+#         Coulombic Energy =   4.203776490522E-01 eV                 0.000 s #
+#      Ion-Electron Energy =   6.183144739875E+01 eV                 0.000 s #
+#           Ion-Ion Energy =  -2.982079485471E+02 eV                 0.000 s #
+#                                                                            #
+#     TOTAL KINETIC ENERGY =   9.268241398220E+01 eV                         #
+#   TOTAL POTENTIAL ENERGY =  -3.244197729205E+02 eV                         #
+#             TOTAL ENERGY =  -2.317373589383E+02 eV                         #
+##############################################################################
+ 
+  
+ Calculating Ion-Ion Forces ...                complete.     0.001 s
+  
+ Calculating Ion-Electron Forces (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Electron Stress (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Ion Stress ...                complete.     0.001 s
+  
+ ------------------------------------------------------------------------------
+                         LATTICE VECTORS (Angstrom)
+ LAT 1           3.976274        0.050921        0.000001
+ LAT 2          -0.050204        3.987657       -0.000001
+ LAT 3           0.000001       -0.000001        3.990522
+ ------------------------------------------------------------------------------
+                                STRESS (GPa)
+ ST_GPa 1       -0.078017        0.005228        0.000000
+ ST_GPa 2        0.005228        0.026187       -0.000003
+ ST_GPa 3        0.000000       -0.000003        0.049752
+  
+ --------------------------------------------------
+ STRESS (a.u.)
+ --------------------------------------------------
+ ST_AU  1  -2.6517277139E-06   1.7769574502E-07   4.4990121722E-12
+ ST_AU  2   1.7769574502E-07   8.9009016282E-07  -9.4443942563E-11
+ ST_AU  3   4.4990121722E-12  -9.4443942563E-11   1.6910430089E-06
+; Cell optimization at step  9, max(stress):  0.2652E-05, total energy:  -8.5161917    ;
+  dV of each real space grid is now   0.104266520083886     
+ Cell length (Bohr)    7.522E+00   7.534E+00   7.536E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   9.000E+01
+ Volume    (Bohr^3)    4.271E+02
+  dV of each real space grid is now   0.104266520083886     
+ Cell length (Bohr)    7.522E+00   7.534E+00   7.536E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   9.000E+01
+ Volume    (Bohr^3)    4.271E+02
+
+ ------------------------------------------------------------------------------
+                           SETUP EWALD 
+ (Ewald) eta                             :   0.5862    
+ (Ewald) Real Space Cutoff               :    8.577     (Bohr)
+ (Ewald) Reciprocal Cutoff               :    6.253     (1/Bohr)
+
+ ------------------------------------------------------------------------------
+                           SETUP PLANE WAVE 
+ Fill the 3D Wang-Teter kernel in G space
+
+ ------------------------------------------------------------------------------
+                           REFRESH ION POSITIONS
+  
+ Calculating Ion-Ion Energy ...                   complete.     0.001 s
+  
+ Calculating Ion-Electron Potential (spline) ... 
+ complete.     0.001 s
+ Rescale the total density from   1.251240 to         12
+
+ ------------------------------------------------------------------------------
+                           DENSITY OPTIMIZATION
+ Electron number for spin            1  is    12.0000000000000     
+ Cell Volume      :            63.286084 Angstrom^3
+ Ion number       :                    4
+ Electron number  :            12.000000
+ Ion density      :             0.063205 Ion/Angstrom^3
+ Electron density :             0.189615 Electron/Angstrom^3
+ 
+|----------------------------------------------------------------------------|
+|           Sqrt Conjugate Gradient Electronic Minimization Report           |
++----------------------------------------------------------------------------+
+| Step         Energy        Pot. Norm #LCG /#Line  line     #FFT   Time (s) |
+| number        (eV)         (in code) Steps/Steps  step    (cumul) (cumul)  |
++----------------------------------------------------------------------------+
+|     0  -2.317373567231E+02 1.94661E-04   0/  0  0.000E+00   1668 3.253E-03 |
+|     1  -2.317373957725E+02 4.71045E-05   8/  1  2.627E-04   1722 2.982E-02 |
+|     2  -2.317373963715E+02 1.23191E-05   6/  1  2.298E-05   1764 5.097E-02 |
+|     3  -2.317373964363E+02 2.43623E-06   8/  1  1.255E-05   1818 7.778E-02 |
+|                                                                            |
+|                                                   Stationary point found!  |
+| Total number of steps:                3                                    |
+| Total number of energy evals:         3                                    |
+| Total number of potential eva         3                                    |
+| Machine precision for energy:        -4.8E-14                              |
+|     Minimization time:                0.078 s                              |
++----------------------------------------------------------------------------+
+##############################################################################
+#                         Intermediate energy report                 time    #
+##############################################################################
+# Thomas-Fermi Kin. Energy =   8.809925279955E+01 eV                 0.000 s #
+# Von-Weizsacker Kin. Ener =   7.236039214904E+00 eV                 0.000 s #
+# Wang-Teter Kinetic Energ =  -2.654851624012E+00 eV                 0.000 s #
+#                                                                            #
+#     LDA Exch-Corr Energy =  -8.846274771336E+01 eV                 0.000 s #
+#         Coulombic Energy =   4.203643577136E-01 eV                 0.000 s #
+#      Ion-Electron Energy =   6.182921729015E+01 eV                 0.000 s #
+#           Ion-Ion Energy =  -2.982046707612E+02 eV                 0.000 s #
+#                                                                            #
+#     TOTAL KINETIC ENERGY =   9.268044039044E+01 eV                         #
+#   TOTAL POTENTIAL ENERGY =  -3.244178368267E+02 eV                         #
+#             TOTAL ENERGY =  -2.317373964363E+02 eV                         #
+##############################################################################
+ 
+  
+ Calculating Ion-Ion Forces ...                complete.     0.001 s
+  
+ Calculating Ion-Electron Forces (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Electron Stress (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Ion Stress ...                complete.     0.001 s
+  
+ ------------------------------------------------------------------------------
+                         LATTICE VECTORS (Angstrom)
+ LAT 1           3.980385        0.050628        0.000001
+ LAT 2          -0.050531        3.986283       -0.000001
+ LAT 3           0.000001       -0.000001        3.987907
+ ------------------------------------------------------------------------------
+                                STRESS (GPa)
+ ST_GPa 1       -0.038110        0.000646        0.000000
+ ST_GPa 2        0.000646        0.016795       -0.000002
+ ST_GPa 3        0.000000       -0.000002        0.029009
+  
+ --------------------------------------------------
+ STRESS (a.u.)
+ --------------------------------------------------
+ ST_AU  1  -1.2953442270E-06   2.1941364659E-08   2.7603350600E-12
+ ST_AU  2   2.1941364659E-08   5.7084906705E-07  -6.3130567760E-11
+ ST_AU  3   2.7603350600E-12  -6.3130567760E-11   9.8597920549E-07
+; Cell optimization at step 10, max(stress):  0.1295E-05, total energy:  -8.5161931    ;
+  dV of each real space grid is now   0.104254002076267     
+ Cell length (Bohr)    7.527E+00   7.532E+00   7.533E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   9.000E+01
+ Volume    (Bohr^3)    4.270E+02
+  dV of each real space grid is now   0.104254002076267     
+ Cell length (Bohr)    7.527E+00   7.532E+00   7.533E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   9.000E+01
+ Volume    (Bohr^3)    4.270E+02
+
+ ------------------------------------------------------------------------------
+                           SETUP EWALD 
+ (Ewald) eta                             :   0.5914    
+ (Ewald) Real Space Cutoff               :    8.498     (Bohr)
+ (Ewald) Reciprocal Cutoff               :    6.256     (1/Bohr)
+
+ ------------------------------------------------------------------------------
+                           SETUP PLANE WAVE 
+ Fill the 3D Wang-Teter kernel in G space
+
+ ------------------------------------------------------------------------------
+                           REFRESH ION POSITIONS
+  
+ Calculating Ion-Ion Energy ...                   complete.     0.001 s
+  
+ Calculating Ion-Electron Potential (spline) ... 
+ complete.     0.001 s
+ Rescale the total density from   1.250898 to         12
+
+ ------------------------------------------------------------------------------
+                           DENSITY OPTIMIZATION
+ Electron number for spin            1  is    12.0000000000000     
+ Cell Volume      :            63.278486 Angstrom^3
+ Ion number       :                    4
+ Electron number  :            12.000000
+ Ion density      :             0.063213 Ion/Angstrom^3
+ Electron density :             0.189638 Electron/Angstrom^3
+ 
+|----------------------------------------------------------------------------|
+|           Sqrt Conjugate Gradient Electronic Minimization Report           |
++----------------------------------------------------------------------------+
+| Step         Energy        Pot. Norm #LCG /#Line  line     #FFT   Time (s) |
+| number        (eV)         (in code) Steps/Steps  step    (cumul) (cumul)  |
++----------------------------------------------------------------------------+
+|     0  -2.317373920663E+02 1.21916E-04   0/  0  0.000E+00   1840 3.253E-03 |
+|     1  -2.317374073995E+02 2.72889E-05   8/  1  1.644E-04   1894 2.974E-02 |
+|     2  -2.317374076329E+02 8.14849E-06   6/  1  1.437E-05   1936 5.089E-02 |
+|     3  -2.317374076611E+02 1.59643E-06   8/  1  8.270E-06   1990 7.761E-02 |
+|                                                                            |
+|                                                   Stationary point found!  |
+| Total number of steps:                3                                    |
+| Total number of energy evals:         3                                    |
+| Total number of potential eva         3                                    |
+| Machine precision for energy:        -4.8E-14                              |
+|     Minimization time:                0.078 s                              |
++----------------------------------------------------------------------------+
+##############################################################################
+#                         Intermediate energy report                 time    #
+##############################################################################
+# Thomas-Fermi Kin. Energy =   8.810636959439E+01 eV                 0.000 s #
+# Von-Weizsacker Kin. Ener =   7.236283595679E+00 eV                 0.000 s #
+# Wang-Teter Kinetic Energ =  -2.655236705510E+00 eV                 0.000 s #
+#                                                                            #
+#     LDA Exch-Corr Energy =  -8.846599778272E+01 eV                 0.000 s #
+#         Coulombic Energy =   4.204538091303E-01 eV                 0.000 s #
+#      Ion-Electron Energy =   6.183733602980E+01 eV                 0.000 s #
+#           Ion-Ion Energy =  -2.982166162019E+02 eV                 0.000 s #
+#                                                                            #
+#     TOTAL KINETIC ENERGY =   9.268741648456E+01 eV                         #
+#   TOTAL POTENTIAL ENERGY =  -3.244248241456E+02 eV                         #
+#             TOTAL ENERGY =  -2.317374076611E+02 eV                         #
+##############################################################################
+ 
+  
+ Calculating Ion-Ion Forces ...                complete.     0.001 s
+  
+ Calculating Ion-Electron Forces (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Electron Stress (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Ion Stress ...                complete.     0.001 s
+  
+ ------------------------------------------------------------------------------
+                         LATTICE VECTORS (Angstrom)
+ LAT 1           3.982794        0.050574        0.000001
+ LAT 2          -0.050603        3.985224       -0.000000
+ LAT 3           0.000001       -0.000000        3.986076
+ ------------------------------------------------------------------------------
+                                STRESS (GPa)
+ ST_GPa 1       -0.024377       -0.000326       -0.000000
+ ST_GPa 2       -0.000326       -0.001755       -0.000001
+ ST_GPa 3       -0.000000       -0.000001        0.003204
+  
+ --------------------------------------------------
+ STRESS (a.u.)
+ --------------------------------------------------
+ ST_AU  1  -8.2854940330E-07  -1.1094335039E-08  -2.8333175638E-12
+ ST_AU  2  -1.1094335039E-08  -5.9636026754E-08  -2.7389928389E-11
+ ST_AU  3  -2.8333175638E-12  -2.7389928389E-11   1.0890164004E-07
+; Cell optimization at step 11, max(stress):  0.8285E-06, total energy:  -8.5161935    ;
+  dV of each real space grid is now   0.104299503644125     
+ Cell length (Bohr)    7.530E+00   7.532E+00   7.532E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   9.000E+01
+ Volume    (Bohr^3)    4.272E+02
+  dV of each real space grid is now   0.104299503644125     
+ Cell length (Bohr)    7.530E+00   7.532E+00   7.532E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   9.000E+01
+ Volume    (Bohr^3)    4.272E+02
+
+ ------------------------------------------------------------------------------
+                           SETUP EWALD 
+ (Ewald) eta                             :   0.5914    
+ (Ewald) Real Space Cutoff               :    8.498     (Bohr)
+ (Ewald) Reciprocal Cutoff               :    6.256     (1/Bohr)
+
+ ------------------------------------------------------------------------------
+                           SETUP PLANE WAVE 
+ Fill the 3D Wang-Teter kernel in G space
+
+ ------------------------------------------------------------------------------
+                           REFRESH ION POSITIONS
+  
+ Calculating Ion-Ion Energy ...                   complete.     0.001 s
+  
+ Calculating Ion-Electron Potential (spline) ... 
+ complete.     0.001 s
+ Rescale the total density from   1.252140 to         12
+
+ ------------------------------------------------------------------------------
+                           DENSITY OPTIMIZATION
+ Electron number for spin            1  is    12.0000000000000     
+ Cell Volume      :            63.306103 Angstrom^3
+ Ion number       :                    4
+ Electron number  :            12.000000
+ Ion density      :             0.063185 Ion/Angstrom^3
+ Electron density :             0.189555 Electron/Angstrom^3
+ 
+|----------------------------------------------------------------------------|
+|           Sqrt Conjugate Gradient Electronic Minimization Report           |
++----------------------------------------------------------------------------+
+| Step         Energy        Pot. Norm #LCG /#Line  line     #FFT   Time (s) |
+| number        (eV)         (in code) Steps/Steps  step    (cumul) (cumul)  |
++----------------------------------------------------------------------------+
+|     0  -2.317373997279E+02 7.71641E-05   0/  0  0.000E+00   2012 3.245E-03 |
+|     1  -2.317374077114E+02 2.24137E-05   7/  1  1.274E-04   2060 2.692E-02 |
+|     2  -2.317374078420E+02 6.18496E-06   6/  1  1.105E-05   2102 4.808E-02 |
+|     3  -2.317374078615E+02 1.41106E-06   8/  1  6.894E-06   2156 7.476E-02 |
+|                                                                            |
+|                                                   Stationary point found!  |
+| Total number of steps:                3                                    |
+| Total number of energy evals:         3                                    |
+| Total number of potential eva         3                                    |
+| Machine precision for energy:        -4.8E-14                              |
+|     Minimization time:                0.075 s                              |
++----------------------------------------------------------------------------+
+##############################################################################
+#                         Intermediate energy report                 time    #
+##############################################################################
+# Thomas-Fermi Kin. Energy =   8.808050498840E+01 eV                 0.000 s #
+# Von-Weizsacker Kin. Ener =   7.235329474758E+00 eV                 0.000 s #
+# Wang-Teter Kinetic Energ =  -2.653798518088E+00 eV                 0.000 s #
+#                                                                            #
+#     LDA Exch-Corr Energy =  -8.845418632380E+01 eV                 0.000 s #
+#         Coulombic Energy =   4.201394599477E-01 eV                 0.000 s #
+#      Ion-Electron Energy =   6.180784838476E+01 eV                 0.000 s #
+#           Ion-Ion Energy =  -2.981732453275E+02 eV                 0.000 s #
+#                                                                            #
+#     TOTAL KINETIC ENERGY =   9.266203594507E+01 eV                         #
+#   TOTAL POTENTIAL ENERGY =  -3.243994438066E+02 eV                         #
+#             TOTAL ENERGY =  -2.317374078615E+02 eV                         #
+##############################################################################
+ 
+  
+ Calculating Ion-Ion Forces ...                complete.     0.001 s
+  
+ Calculating Ion-Electron Forces (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Electron Stress (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Ion Stress ...                complete.     0.001 s
+  
+ ------------------------------------------------------------------------------
+                         LATTICE VECTORS (Angstrom)
+ LAT 1           3.984642        0.050600        0.000001
+ LAT 2          -0.050601        3.985356       -0.000000
+ LAT 3           0.000001       -0.000000        3.985833
+ ------------------------------------------------------------------------------
+                                STRESS (GPa)
+ ST_GPa 1        0.024559       -0.000064        0.000001
+ ST_GPa 2       -0.000064        0.031335        0.000000
+ ST_GPa 3        0.000001        0.000000        0.032804
+  
+ --------------------------------------------------
+ STRESS (a.u.)
+ --------------------------------------------------
+ ST_AU  1   8.3474420314E-07  -2.1615568990E-09   2.0746866588E-11
+ ST_AU  2  -2.1615568990E-09   1.0650694823E-06   5.5187098415E-12
+ ST_AU  3   2.0746866588E-11   5.5187098415E-12   1.1149937899E-06
+; Cell optimization at step 12, max(stress):  0.1115E-05, total energy:  -8.5161935    ;
+  dV of each real space grid is now   0.104088496800223     
+ Cell length (Bohr)    7.526E+00   7.526E+00   7.526E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   9.000E+01
+ Volume    (Bohr^3)    4.263E+02
+  dV of each real space grid is now   0.104088496800223     
+ Cell length (Bohr)    7.526E+00   7.526E+00   7.526E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   9.000E+01
+ Volume    (Bohr^3)    4.263E+02
+
+ ------------------------------------------------------------------------------
+                           SETUP EWALD 
+ (Ewald) eta                             :   0.5914    
+ (Ewald) Real Space Cutoff               :    8.498     (Bohr)
+ (Ewald) Reciprocal Cutoff               :    6.261     (1/Bohr)
+
+ ------------------------------------------------------------------------------
+                           SETUP PLANE WAVE 
+ Fill the 3D Wang-Teter kernel in G space
+
+ ------------------------------------------------------------------------------
+                           REFRESH ION POSITIONS
+  
+ Calculating Ion-Ion Energy ...                   complete.     0.001 s
+  
+ Calculating Ion-Electron Potential (spline) ... 
+ complete.     0.001 s
+ Rescale the total density from   1.246535 to         12
+
+ ------------------------------------------------------------------------------
+                           DENSITY OPTIMIZATION
+ Electron number for spin            1  is    12.0000000000000     
+ Cell Volume      :            63.178030 Angstrom^3
+ Ion number       :                    4
+ Electron number  :            12.000000
+ Ion density      :             0.063313 Ion/Angstrom^3
+ Electron density :             0.189939 Electron/Angstrom^3
+ 
+|----------------------------------------------------------------------------|
+|           Sqrt Conjugate Gradient Electronic Minimization Report           |
++----------------------------------------------------------------------------+
+| Step         Energy        Pot. Norm #LCG /#Line  line     #FFT   Time (s) |
+| number        (eV)         (in code) Steps/Steps  step    (cumul) (cumul)  |
++----------------------------------------------------------------------------+
+|     0  -2.317372667409E+02 2.28257E-04   0/  0  0.000E+00   2178 3.246E-03 |
+|     1  -2.317373614162E+02 6.23911E-05   5/  1  4.689E-04   2214 2.137E-02 |
+|     2  -2.317373626138E+02 1.64998E-05   5/  1  3.200E-05   2250 3.980E-02 |
+|     3  -2.317373627060E+02 3.15478E-06   7/  1  1.180E-05   2298 6.371E-02 |
+|                                                                            |
+|                                                   Stationary point found!  |
+| Total number of steps:                3                                    |
+| Total number of energy evals:         3                                    |
+| Total number of potential eva         3                                    |
+| Machine precision for energy:        -4.8E-14                              |
+|     Minimization time:                0.064 s                              |
++----------------------------------------------------------------------------+
+##############################################################################
+#                         Intermediate energy report                 time    #
+##############################################################################
+# Thomas-Fermi Kin. Energy =   8.820064519029E+01 eV                 0.000 s #
+# Von-Weizsacker Kin. Ener =   7.239756023622E+00 eV                 0.000 s #
+# Wang-Teter Kinetic Energ =  -2.660533525028E+00 eV                 0.000 s #
+#                                                                            #
+#     LDA Exch-Corr Energy =  -8.850903083859E+01 eV                 0.000 s #
+#         Coulombic Energy =   4.216242335735E-01 eV                 0.000 s #
+#      Ion-Electron Energy =   6.194477003021E+01 eV                 0.000 s #
+#           Ion-Ion Energy =  -2.983745938201E+02 eV                 0.000 s #
+#                                                                            #
+#     TOTAL KINETIC ENERGY =   9.277986768888E+01 eV                         #
+#   TOTAL POTENTIAL ENERGY =  -3.245172303949E+02 eV                         #
+#             TOTAL ENERGY =  -2.317373627060E+02 eV                         #
+##############################################################################
+ 
+  
+ Calculating Ion-Ion Forces ...                complete.     0.001 s
+  
+ Calculating Ion-Electron Forces (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Electron Stress (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Ion Stress ...                complete.     0.001 s
+  
+ ------------------------------------------------------------------------------
+                         LATTICE VECTORS (Angstrom)
+ LAT 1           3.982408        0.050570        0.000001
+ LAT 2          -0.050567        3.982506       -0.000000
+ LAT 3           0.000001       -0.000000        3.982849
+ ------------------------------------------------------------------------------
+                                STRESS (GPa)
+ ST_GPa 1       -0.144411       -0.000029       -0.000002
+ ST_GPa 2       -0.000029       -0.143523       -0.000002
+ ST_GPa 3       -0.000002       -0.000002       -0.143332
+  
+ --------------------------------------------------
+ STRESS (a.u.)
+ --------------------------------------------------
+ ST_AU  1  -4.9084242599E-06  -9.8826676255E-10  -7.2491640546E-11
+ ST_AU  2  -9.8826676255E-10  -4.8782653666E-06  -6.5056968946E-11
+ ST_AU  3  -7.2491640546E-11  -6.5056968946E-11  -4.8717492722E-06
+; Cell optimization at step 13, max(stress):  0.4908E-05, total energy:  -8.5161919    ;
+  dV of each real space grid is now   0.104344679011595     
+ Cell length (Bohr)    7.532E+00   7.533E+00   7.533E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   9.000E+01
+ Volume    (Bohr^3)    4.274E+02
+  dV of each real space grid is now   0.104344679011595     
+ Cell length (Bohr)    7.532E+00   7.533E+00   7.533E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   9.000E+01
+ Volume    (Bohr^3)    4.274E+02
+
+ ------------------------------------------------------------------------------
+                           SETUP EWALD 
+ (Ewald) eta                             :   0.5914    
+ (Ewald) Real Space Cutoff               :    8.498     (Bohr)
+ (Ewald) Reciprocal Cutoff               :    6.256     (1/Bohr)
+
+ ------------------------------------------------------------------------------
+                           SETUP PLANE WAVE 
+ Fill the 3D Wang-Teter kernel in G space
+
+ ------------------------------------------------------------------------------
+                           REFRESH ION POSITIONS
+  
+ Calculating Ion-Ion Energy ...                   complete.     0.001 s
+  
+ Calculating Ion-Electron Potential (spline) ... 
+ complete.     0.001 s
+ Rescale the total density from   1.255218 to         12
+
+ ------------------------------------------------------------------------------
+                           DENSITY OPTIMIZATION
+ Electron number for spin            1  is    11.9999999999999     
+ Cell Volume      :            63.333523 Angstrom^3
+ Ion number       :                    4
+ Electron number  :            12.000000
+ Ion density      :             0.063158 Ion/Angstrom^3
+ Electron density :             0.189473 Electron/Angstrom^3
+ 
+|----------------------------------------------------------------------------|
+|           Sqrt Conjugate Gradient Electronic Minimization Report           |
++----------------------------------------------------------------------------+
+| Step         Energy        Pot. Norm #LCG /#Line  line     #FFT   Time (s) |
+| number        (eV)         (in code) Steps/Steps  step    (cumul) (cumul)  |
++----------------------------------------------------------------------------+
+|     0  -2.317372596915E+02 2.75145E-04   0/  0  0.000E+00   2320 3.319E-03 |
+|     1  -2.317373978295E+02 7.50100E-05   5/  1  5.669E-04   2356 2.145E-02 |
+|     2  -2.317373996678E+02 2.22140E-05   5/  1  3.856E-05   2392 3.977E-02 |
+|     3  -2.317373998217E+02 4.08178E-06   7/  1  1.431E-05   2440 6.390E-02 |
+|                                                                            |
+|                                                   Stationary point found!  |
+| Total number of steps:                3                                    |
+| Total number of energy evals:         3                                    |
+| Total number of potential eva         3                                    |
+| Machine precision for energy:        -4.8E-14                              |
+|     Minimization time:                0.064 s                              |
++----------------------------------------------------------------------------+
+##############################################################################
+#                         Intermediate energy report                 time    #
+##############################################################################
+# Thomas-Fermi Kin. Energy =   8.805482690009E+01 eV                 0.000 s #
+# Von-Weizsacker Kin. Ener =   7.234427397162E+00 eV                 0.000 s #
+# Wang-Teter Kinetic Energ =  -2.652341231812E+00 eV                 0.000 s #
+#                                                                            #
+#     LDA Exch-Corr Energy =  -8.844246091072E+01 eV                 0.000 s #
+#         Coulombic Energy =   4.198160295549E-01 eV                 0.000 s #
+#      Ion-Electron Energy =   6.177854055515E+01 eV                 0.000 s #
+#           Ion-Ion Energy =  -2.981302085611E+02 eV                 0.000 s #
+#                                                                            #
+#     TOTAL KINETIC ENERGY =   9.263691306544E+01 eV                         #
+#   TOTAL POTENTIAL ENERGY =  -3.243743128871E+02 eV                         #
+#             TOTAL ENERGY =  -2.317373998217E+02 eV                         #
+##############################################################################
+ 
+  
+ Calculating Ion-Ion Forces ...                complete.     0.001 s
+  
+ Calculating Ion-Electron Forces (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Electron Stress (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Ion Stress ...                complete.     0.001 s
+  
+ ------------------------------------------------------------------------------
+                         LATTICE VECTORS (Angstrom)
+ LAT 1           3.985687        0.050612        0.000001
+ LAT 2          -0.050608        3.985765       -0.000000
+ LAT 3           0.000001       -0.000000        3.986104
+ ------------------------------------------------------------------------------
+                                STRESS (GPa)
+ ST_GPa 1        0.066461       -0.000013        0.000001
+ ST_GPa 2       -0.000013        0.067154        0.000001
+ ST_GPa 3        0.000001        0.000001        0.067304
+  
+ --------------------------------------------------
+ STRESS (a.u.)
+ --------------------------------------------------
+ ST_AU  1   2.2589639902E-06  -4.5754637954E-10   2.4925894163E-11
+ ST_AU  2  -4.5754637954E-10   2.2825203163E-06   3.0762339362E-11
+ ST_AU  3   2.4925894163E-11   3.0762339362E-11   2.2876007376E-06
+; Cell optimization at step 14, max(stress):  0.2288E-05, total energy:  -8.5161932    ;
+  dV of each real space grid is now   0.104201171972643     
+ Cell length (Bohr)    7.529E+00   7.529E+00   7.529E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   9.000E+01
+ Volume    (Bohr^3)    4.268E+02
+  dV of each real space grid is now   0.104201171972643     
+ Cell length (Bohr)    7.529E+00   7.529E+00   7.529E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   9.000E+01
+ Volume    (Bohr^3)    4.268E+02
+
+ ------------------------------------------------------------------------------
+                           SETUP EWALD 
+ (Ewald) eta                             :   0.5914    
+ (Ewald) Real Space Cutoff               :    8.498     (Bohr)
+ (Ewald) Reciprocal Cutoff               :    6.259     (1/Bohr)
+
+ ------------------------------------------------------------------------------
+                           SETUP PLANE WAVE 
+ Fill the 3D Wang-Teter kernel in G space
+
+ ------------------------------------------------------------------------------
+                           REFRESH ION POSITIONS
+  
+ Calculating Ion-Ion Energy ...                   complete.     0.001 s
+  
+ Calculating Ion-Electron Potential (spline) ... 
+ complete.     0.001 s
+ Rescale the total density from   1.248694 to         12
+
+ ------------------------------------------------------------------------------
+                           DENSITY OPTIMIZATION
+ Electron number for spin            1  is    12.0000000000000     
+ Cell Volume      :            63.246420 Angstrom^3
+ Ion number       :                    4
+ Electron number  :            12.000000
+ Ion density      :             0.063245 Ion/Angstrom^3
+ Electron density :             0.189734 Electron/Angstrom^3
+ 
+|----------------------------------------------------------------------------|
+|           Sqrt Conjugate Gradient Electronic Minimization Report           |
++----------------------------------------------------------------------------+
+| Step         Energy        Pot. Norm #LCG /#Line  line     #FFT   Time (s) |
+| number        (eV)         (in code) Steps/Steps  step    (cumul) (cumul)  |
++----------------------------------------------------------------------------+
+|     0  -2.317373603400E+02 1.54614E-04   0/  0  0.000E+00   2462 3.248E-03 |
+|     1  -2.317374037439E+02 3.25035E-05   6/  1  3.188E-04   2504 2.422E-02 |
+|     2  -2.317374041183E+02 7.82172E-06   5/  1  1.846E-05   2540 4.258E-02 |
+|     3  -2.317374041452E+02 1.72040E-06   7/  1  6.512E-06   2588 6.662E-02 |
+|                                                                            |
+|                                                   Stationary point found!  |
+| Total number of steps:                3                                    |
+| Total number of energy evals:         3                                    |
+| Total number of potential eva         3                                    |
+| Machine precision for energy:        -4.8E-14                              |
+|     Minimization time:                0.067 s                              |
++----------------------------------------------------------------------------+
+##############################################################################
+#                         Intermediate energy report                 time    #
+##############################################################################
+# Thomas-Fermi Kin. Energy =   8.813643656029E+01 eV                 0.000 s #
+# Von-Weizsacker Kin. Ener =   7.237382304359E+00 eV                 0.000 s #
+# Wang-Teter Kinetic Energ =  -2.656927907895E+00 eV                 0.000 s #
+#                                                                            #
+#     LDA Exch-Corr Energy =  -8.847972472599E+01 eV                 0.000 s #
+#         Coulombic Energy =   4.208281674653E-01 eV                 0.000 s #
+#      Ion-Electron Energy =   6.187161000817E+01 eV                 0.000 s #
+#           Ion-Ion Energy =  -2.982670085516E+02 eV                 0.000 s #
+#                                                                            #
+#     TOTAL KINETIC ENERGY =   9.271689095675E+01 eV                         #
+#   TOTAL POTENTIAL ENERGY =  -3.244542951019E+02 eV                         #
+#             TOTAL ENERGY =  -2.317374041452E+02 eV                         #
+##############################################################################
+ 
+  
+ Calculating Ion-Ion Forces ...                complete.     0.001 s
+  
+ Calculating Ion-Electron Forces (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Electron Stress (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Ion Stress ...                complete.     0.001 s
+  
+ ------------------------------------------------------------------------------
+                         LATTICE VECTORS (Angstrom)
+ LAT 1           3.983873        0.050589        0.000001
+ LAT 2          -0.050585        3.983932       -0.000000
+ LAT 3           0.000001       -0.000000        3.984267
+ ------------------------------------------------------------------------------
+                                STRESS (GPa)
+ ST_GPa 1       -0.051314       -0.000011       -0.000001
+ ST_GPa 2       -0.000011       -0.050759       -0.000001
+ ST_GPa 3       -0.000001       -0.000001       -0.050639
+  
+ --------------------------------------------------
+ STRESS (a.u.)
+ --------------------------------------------------
+ ST_AU  1  -1.7441319526E-06  -3.7126345628E-10  -2.0924800120E-11
+ ST_AU  2  -3.7126345628E-10  -1.7252533305E-06  -2.5590864486E-11
+ ST_AU  3  -2.0924800120E-11  -2.5590864486E-11  -1.7211791762E-06
+; Cell optimization at step 15, max(stress):  0.1744E-05, total energy:  -8.5161934    ;
+  dV of each real space grid is now   0.104331936650046     
+ Cell length (Bohr)    7.532E+00   7.532E+00   7.532E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   9.000E+01
+ Volume    (Bohr^3)    4.273E+02
+  dV of each real space grid is now   0.104331936650046     
+ Cell length (Bohr)    7.532E+00   7.532E+00   7.532E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   9.000E+01
+ Volume    (Bohr^3)    4.273E+02
+
+ ------------------------------------------------------------------------------
+                           SETUP EWALD 
+ (Ewald) eta                             :   0.5914    
+ (Ewald) Real Space Cutoff               :    8.498     (Bohr)
+ (Ewald) Reciprocal Cutoff               :    6.256     (1/Bohr)
+
+ ------------------------------------------------------------------------------
+                           SETUP PLANE WAVE 
+ Fill the 3D Wang-Teter kernel in G space
+
+ ------------------------------------------------------------------------------
+                           REFRESH ION POSITIONS
+  
+ Calculating Ion-Ion Energy ...                   complete.     0.001 s
+  
+ Calculating Ion-Electron Potential (spline) ... 
+ complete.     0.001 s
+ Rescale the total density from   1.253554 to         12
+
+ ------------------------------------------------------------------------------
+                           DENSITY OPTIMIZATION
+ Electron number for spin            1  is    12.0000000000001     
+ Cell Volume      :            63.325789 Angstrom^3
+ Ion number       :                    4
+ Electron number  :            12.000000
+ Ion density      :             0.063165 Ion/Angstrom^3
+ Electron density :             0.189496 Electron/Angstrom^3
+ 
+|----------------------------------------------------------------------------|
+|           Sqrt Conjugate Gradient Electronic Minimization Report           |
++----------------------------------------------------------------------------+
+| Step         Energy        Pot. Norm #LCG /#Line  line     #FFT   Time (s) |
+| number        (eV)         (in code) Steps/Steps  step    (cumul) (cumul)  |
++----------------------------------------------------------------------------+
+|     0  -2.317373662611E+02 1.40437E-04   0/  0  0.000E+00   2610 3.261E-03 |
+|     1  -2.317374023002E+02 3.86108E-05   5/  1  2.898E-04   2646 2.146E-02 |
+|     2  -2.317374027566E+02 1.06765E-05   5/  1  1.968E-05   2682 3.981E-02 |
+|     3  -2.317374027888E+02 2.03132E-06   7/  1  6.824E-06   2730 6.384E-02 |
+|                                                                            |
+|                                                   Stationary point found!  |
+| Total number of steps:                3                                    |
+| Total number of energy evals:         3                                    |
+| Total number of potential eva         3                                    |
+| Machine precision for energy:        -4.8E-14                              |
+|     Minimization time:                0.064 s                              |
++----------------------------------------------------------------------------+
+##############################################################################
+#                         Intermediate energy report                 time    #
+##############################################################################
+# Thomas-Fermi Kin. Energy =   8.806207416799E+01 eV                 0.000 s #
+# Von-Weizsacker Kin. Ener =   7.234673924220E+00 eV                 0.000 s #
+# Wang-Teter Kinetic Energ =  -2.652762988576E+00 eV                 0.000 s #
+#                                                                            #
+#     LDA Exch-Corr Energy =  -8.844576945978E+01 eV                 0.000 s #
+#         Coulombic Energy =   4.199106817607E-01 eV                 0.000 s #
+#      Ion-Electron Energy =   6.178681612279E+01 eV                 0.000 s #
+#           Ion-Ion Energy =  -2.981423452372E+02 eV                 0.000 s #
+#                                                                            #
+#     TOTAL KINETIC ENERGY =   9.264398510364E+01 eV                         #
+#   TOTAL POTENTIAL ENERGY =  -3.243813878925E+02 eV                         #
+#             TOTAL ENERGY =  -2.317374027888E+02 eV                         #
+##############################################################################
+ 
+  
+ Calculating Ion-Ion Forces ...                complete.     0.001 s
+  
+ Calculating Ion-Electron Forces (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Electron Stress (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Ion Stress ...                complete.     0.001 s
+  
+ ------------------------------------------------------------------------------
+                         LATTICE VECTORS (Angstrom)
+ LAT 1           3.985552        0.050611        0.000001
+ LAT 2          -0.050606        3.985593       -0.000000
+ LAT 3           0.000001       -0.000000        3.985924
+ ------------------------------------------------------------------------------
+                                STRESS (GPa)
+ ST_GPa 1        0.055912       -0.000006        0.000001
+ ST_GPa 2       -0.000006        0.056291        0.000001
+ ST_GPa 3        0.000001        0.000001        0.056373
+  
+ --------------------------------------------------
+ STRESS (a.u.)
+ --------------------------------------------------
+ ST_AU  1   1.9004186946E-06  -1.8801573487E-10   2.5445233109E-11
+ ST_AU  2  -1.8801573487E-10   1.9133039676E-06   2.5226995341E-11
+ ST_AU  3   2.5445233109E-11   2.5226995341E-11   1.9160816611E-06
+; Cell optimization at step 16, max(stress):  0.1916E-05, total energy:  -8.5161934    ;
+  dV of each real space grid is now   0.104295808135340     
+ Cell length (Bohr)    7.531E+00   7.531E+00   7.531E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   9.000E+01
+ Volume    (Bohr^3)    4.272E+02
+  dV of each real space grid is now   0.104295808135340     
+ Cell length (Bohr)    7.531E+00   7.531E+00   7.531E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   9.000E+01
+ Volume    (Bohr^3)    4.272E+02
+
+ ------------------------------------------------------------------------------
+                           SETUP EWALD 
+ (Ewald) eta                             :   0.5914    
+ (Ewald) Real Space Cutoff               :    8.498     (Bohr)
+ (Ewald) Reciprocal Cutoff               :    6.257     (1/Bohr)
+
+ ------------------------------------------------------------------------------
+                           SETUP PLANE WAVE 
+ Fill the 3D Wang-Teter kernel in G space
+
+ ------------------------------------------------------------------------------
+                           REFRESH ION POSITIONS
+  
+ Calculating Ion-Ion Energy ...                   complete.     0.001 s
+  
+ Calculating Ion-Electron Potential (spline) ... 
+ complete.     0.001 s
+ Rescale the total density from   1.251116 to         12
+
+ ------------------------------------------------------------------------------
+                           DENSITY OPTIMIZATION
+ Electron number for spin            1  is    12.0000000000000     
+ Cell Volume      :            63.303860 Angstrom^3
+ Ion number       :                    4
+ Electron number  :            12.000000
+ Ion density      :             0.063187 Ion/Angstrom^3
+ Electron density :             0.189562 Electron/Angstrom^3
+ 
+|----------------------------------------------------------------------------|
+|           Sqrt Conjugate Gradient Electronic Minimization Report           |
++----------------------------------------------------------------------------+
+| Step         Energy        Pot. Norm #LCG /#Line  line     #FFT   Time (s) |
+| number        (eV)         (in code) Steps/Steps  step    (cumul) (cumul)  |
++----------------------------------------------------------------------------+
+|     0  -2.317374056812E+02 3.90611E-05   0/  0  0.000E+00   2752 3.251E-03 |
+|     1  -2.317374084283E+02 8.02737E-06   6/  1  8.013E-05   2794 2.415E-02 |
+|     2  -2.317374084532E+02 2.33591E-06   5/  1  4.679E-06   2830 4.265E-02 |
+|     3  -2.317374084551E+02 4.78113E-07   7/  1  1.676E-06   2878 6.658E-02 |
+|                                                                            |
+|                                                   Stationary point found!  |
+| Total number of steps:                3                                    |
+| Total number of energy evals:         3                                    |
+| Total number of potential eva         3                                    |
+| Machine precision for energy:        -4.8E-14                              |
+|     Minimization time:                0.067 s                              |
++----------------------------------------------------------------------------+
+##############################################################################
+#                         Intermediate energy report                 time    #
+##############################################################################
+# Thomas-Fermi Kin. Energy =   8.808260835214E+01 eV                 0.000 s #
+# Von-Weizsacker Kin. Ener =   7.235409373906E+00 eV                 0.000 s #
+# Wang-Teter Kinetic Energ =  -2.653921245605E+00 eV                 0.000 s #
+#                                                                            #
+#     LDA Exch-Corr Energy =  -8.845514655877E+01 eV                 0.000 s #
+#         Coulombic Energy =   4.201665768946E-01 eV                 0.000 s #
+#      Ion-Electron Energy =   6.181024223781E+01 eV                 0.000 s #
+#           Ion-Ion Energy =  -2.981767671915E+02 eV                 0.000 s #
+#                                                                            #
+#     TOTAL KINETIC ENERGY =   9.266409648044E+01 eV                         #
+#   TOTAL POTENTIAL ENERGY =  -3.244015049356E+02 eV                         #
+#             TOTAL ENERGY =  -2.317374084551E+02 eV                         #
+##############################################################################
+ 
+  
+ Calculating Ion-Ion Forces ...                complete.     0.001 s
+  
+ Calculating Ion-Electron Forces (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Electron Stress (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Ion Stress ...                complete.     0.001 s
+  
+ ------------------------------------------------------------------------------
+                         LATTICE VECTORS (Angstrom)
+ LAT 1           3.985095        0.050605        0.000001
+ LAT 2          -0.050600        3.985133       -0.000000
+ LAT 3           0.000001       -0.000000        3.985463
+ ------------------------------------------------------------------------------
+                                STRESS (GPa)
+ ST_GPa 1        0.026303       -0.000005        0.000001
+ ST_GPa 2       -0.000005        0.026655        0.000000
+ ST_GPa 3        0.000001        0.000000        0.026731
+  
+ --------------------------------------------------
+ STRESS (a.u.)
+ --------------------------------------------------
+ ST_AU  1   8.9403225445E-07  -1.7509829196E-10   1.9479102450E-11
+ ST_AU  2  -1.7509829196E-10   9.0599204676E-07   1.1140422884E-11
+ ST_AU  3   1.9479102450E-11   1.1140422884E-11   9.0856992034E-07
+; Cell optimization at step 17, max(stress):  0.9086E-06, total energy:  -8.5161936    ;
+  dV of each real space grid is now   0.104275322160155     
+ Cell length (Bohr)    7.531E+00   7.531E+00   7.531E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   9.000E+01
+ Volume    (Bohr^3)    4.271E+02
+  dV of each real space grid is now   0.104275322160155     
+ Cell length (Bohr)    7.531E+00   7.531E+00   7.531E+00
+ Angle     (Degree)    9.000E+01   9.000E+01   9.000E+01
+ Volume    (Bohr^3)    4.271E+02
+
+ ------------------------------------------------------------------------------
+                           SETUP EWALD 
+ (Ewald) eta                             :   0.5914    
+ (Ewald) Real Space Cutoff               :    8.498     (Bohr)
+ (Ewald) Reciprocal Cutoff               :    6.257     (1/Bohr)
+
+ ------------------------------------------------------------------------------
+                           SETUP PLANE WAVE 
+ Fill the 3D Wang-Teter kernel in G space
+
+ ------------------------------------------------------------------------------
+                           REFRESH ION POSITIONS
+  
+ Calculating Ion-Ion Energy ...                   complete.     0.001 s
+  
+ Calculating Ion-Electron Potential (spline) ... 
+ complete.     0.001 s
+ Rescale the total density from   1.251058 to         12
+
+ ------------------------------------------------------------------------------
+                           DENSITY OPTIMIZATION
+ Electron number for spin            1  is    12.0000000000000     
+ Cell Volume      :            63.291426 Angstrom^3
+ Ion number       :                    4
+ Electron number  :            12.000000
+ Ion density      :             0.063200 Ion/Angstrom^3
+ Electron density :             0.189599 Electron/Angstrom^3
+ 
+|----------------------------------------------------------------------------|
+|           Sqrt Conjugate Gradient Electronic Minimization Report           |
++----------------------------------------------------------------------------+
+| Step         Energy        Pot. Norm #LCG /#Line  line     #FFT   Time (s) |
+| number        (eV)         (in code) Steps/Steps  step    (cumul) (cumul)  |
++----------------------------------------------------------------------------+
+|     0  -2.317374089744E+02 2.19660E-05   0/  0  0.000E+00   2900 3.247E-03 |
+|     1  -2.317374098631E+02 5.72938E-06   5/  1  4.551E-05   2936 2.139E-02 |
+|     2  -2.317374098750E+02 1.13836E-06   6/  1  3.370E-06   2978 4.278E-02 |
+|     3  -2.317374098755E+02 3.43485E-07   7/  1  9.592E-07   3026 6.688E-02 |
+|                                                                            |
+|                                                   Stationary point found!  |
+| Total number of steps:                3                                    |
+| Total number of energy evals:         3                                    |
+| Total number of potential eva         3                                    |
+| Machine precision for energy:        -4.8E-14                              |
+|     Minimization time:                0.067 s                              |
++----------------------------------------------------------------------------+
+##############################################################################
+#                         Intermediate energy report                 time    #
+##############################################################################
+# Thomas-Fermi Kin. Energy =   8.809425080487E+01 eV                 0.000 s #
+# Von-Weizsacker Kin. Ener =   7.235839488216E+00 eV                 0.000 s #
+# Wang-Teter Kinetic Energ =  -2.654566833747E+00 eV                 0.000 s #
+#                                                                            #
+#     LDA Exch-Corr Energy =  -8.846046361289E+01 eV                 0.000 s #
+#         Coulombic Energy =   4.203079573232E-01 eV                 0.000 s #
+#      Ion-Electron Energy =   6.182351487957E+01 eV                 0.000 s #
+#           Ion-Ion Energy =  -2.981962925588E+02 eV                 0.000 s #
+#                                                                            #
+#     TOTAL KINETIC ENERGY =   9.267552345934E+01 eV                         #
+#   TOTAL POTENTIAL ENERGY =  -3.244129333348E+02 eV                         #
+#             TOTAL ENERGY =  -2.317374098755E+02 eV                         #
+##############################################################################
+ 
+  
+ Calculating Ion-Ion Forces ...                complete.     0.001 s
+  
+ Calculating Ion-Electron Forces (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Electron Stress (spline) ...  complete.     0.001 s                        
+  
+ Calculating Ion-Ion Stress ...                complete.     0.001 s
+  
+ ------------------------------------------------------------------------------
+                         LATTICE VECTORS (Angstrom)
+ LAT 1           3.984836        0.050602        0.000001
+ LAT 2          -0.050597        3.984871       -0.000000
+ LAT 3           0.000001       -0.000000        3.985200
+ ------------------------------------------------------------------------------
+                                STRESS (GPa)
+ ST_GPa 1        0.009641       -0.000005        0.000000
+ ST_GPa 2       -0.000005        0.009963        0.000000
+ ST_GPa 3        0.000000        0.000000        0.010032
+  
+ --------------------------------------------------
+ STRESS (a.u.)
+ --------------------------------------------------
+ ST_AU  1   3.2769049164E-07  -1.6169379601E-10   1.2614848052E-11
+ ST_AU  2  -1.6169379601E-10   3.3863226552E-07   4.0215201466E-12
+ ST_AU  3   1.2614848052E-11   4.0215201466E-12   3.4099089817E-07
+; Cell optimization at step 18, max(stress):  0.3410E-06, total energy:  -8.5161936    ;
+##############################################################################
+#                               FINAL ENERGIES                       time    #
+##############################################################################
+# Thomas-Fermi Kin. Energy =   8.809425080487E+01 eV                 0.000 s #
+# Von-Weizsacker Kin. Ener =   7.235839488216E+00 eV                 0.000 s #
+# Wang-Teter Kinetic Energ =  -2.654566833747E+00 eV                 0.000 s #
+#                                                                            #
+#     LDA Exch-Corr Energy =  -8.846046361289E+01 eV                 0.000 s #
+#         Coulombic Energy =   4.203079573232E-01 eV                 0.000 s #
+#      Ion-Electron Energy =   6.182351487957E+01 eV                 0.000 s #
+#           Ion-Ion Energy =  -2.981962925588E+02 eV                 0.000 s #
+#                                                                            #
+#     TOTAL KINETIC ENERGY =   9.267552345934E+01 eV                         #
+#   TOTAL POTENTIAL ENERGY =  -3.244129333348E+02 eV                         #
+#             TOTAL ENERGY =  -2.317374098755E+02 eV                         #
+##############################################################################
+  
+ ------------------------------------------------------------------------------
+                         LATTICE VECTORS (Angstrom)
+ LAT 1           3.984836        0.050602        0.000001
+ LAT 2          -0.050597        3.984871       -0.000000
+ LAT 3           0.000001       -0.000000        3.985200
+ ------------------------------------------------------------------------------
+                                STRESS (GPa)
+ ST_GPa 1        0.009641       -0.000005        0.000000
+ ST_GPa 2       -0.000005        0.009963        0.000000
+ ST_GPa 3        0.000000        0.000000        0.010032
+  
+ --------------------------------------------------
+ STRESS (a.u.)
+ --------------------------------------------------
+ ST_AU  1   3.2769049164E-07  -1.6169379601E-10   1.2614848052E-11
+ ST_AU  2  -1.6169379601E-10   3.3863226552E-07   4.0215201466E-12
+ ST_AU  3   1.2614848052E-11   4.0215201466E-12   3.4099089817E-07
+  
+ ----------------------------- TIME INFORMATION ------------------------------
+    PROFESS      :      2.06s WALL    100.00% (       1 calls)     2.06s/call
+    InitPROFESS  :      0.07s WALL      3.45% (       1 calls)     0.07s/call
+    KEDFRefresh  :      0.01s WALL      0.50% (      18 calls)     0.00s/call
+    IonRefresh   :      0.03s WALL      1.52% (      18 calls)     0.00s/call
+    EwaldEnergy  :      0.01s WALL      0.68% (      18 calls)     0.00s/call
+    ForwFFT_3D   :      0.12s WALL      5.73% (    2016 calls)     0.00s/call
+    BackFFT_3D   :      0.08s WALL      3.71% (    2106 calls)     0.00s/call
+    Pot_Ion      :      0.03s WALL      1.53% (     459 calls)     0.00s/call
+    Pot_Har      :      0.14s WALL      6.96% (     459 calls)     0.00s/call
+    Pot_Exc      :      0.23s WALL     11.10% (     459 calls)     0.00s/call
+    Pot_KEDF     :      0.89s WALL     43.05% (     459 calls)     0.00s/call
+    VWPotSqrPlus :      0.10s WALL      4.70% (     459 calls)     0.00s/call
+    NextGradient :      0.03s WALL      1.65% (      60 calls)     0.00s/call
+    CalForce     :      0.04s WALL      1.78% (      18 calls)     0.00s/call
+    EwaldForces  :      0.02s WALL      1.02% (      18 calls)     0.00s/call
+    CalStress    :      0.10s WALL      5.08% (      18 calls)     0.01s/call
+    EwaldStress  :      0.01s WALL      0.68% (      18 calls)     0.00s/call
+ -----------------------------------------------------------------------------
+ ------------------------------- TOTAL ---------------------------------------
+    PROFESS      :      2.06s WALL    100.00% (       1 calls)     2.06s/call
+ -----------------------------------------------------------------------------
+
+Run completed on: 12/01/2014 at 15:07:25 
+  
