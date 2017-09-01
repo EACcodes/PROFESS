@@ -137,7 +137,7 @@ SUBROUTINE GGAPotentialPlus(rho, potential, calcEnergy, energy, functionals)
   TWk = 0.8438
   TWmu = 0.2319/cs
   PBE2k = 6.9031
-  PBE2mu = 2.0309/cs
+  PBE2mu = 2.0309/cs**2
   E00A1 = 135.d0
   E00A2 = 28.d0/cs**2
   E00A3 = 5.d0/cs**4
