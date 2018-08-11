@@ -624,10 +624,7 @@ SUBROUTINE KEDFRefresh(kinetic)
   USE PlaneWave, ONLY: FillQTable
   USE KEDF_WTkernel, ONLY: FillWT
   USE KEDF_WGCkernel, ONLY: FillWGC
-<<<<<<< HEAD
-=======
   USE KEDF_MGPkernel, ONLY: FillMGP
->>>>>>> 86ef2760f4a74e31322f3edcbdbd6c06a2415ee6
   USE KEDF_CAT, ONLY: FillCAT
   USE Sys, ONLY: hold0, holdS, rho0, rhoS
   USE KEDF_WGCD, ONLY: mrhos
@@ -661,13 +658,10 @@ SUBROUTINE KEDFRefresh(kinetic)
       IF (.NOT.hold0) rho0 = tmpRho 
       IF (.NOT.holdS) rhoS = mrhos * tmpRho 
       CALL FillWGC()
-<<<<<<< HEAD
-=======
     ! 19: MGP
     CASE(19)
      IF (.NOT.hold0) rho0 = tmpRho
      CALL FillMGP()
->>>>>>> 86ef2760f4a74e31322f3edcbdbd6c06a2415ee6
     ! 10: CAT
     CASE(10)
       IF (.NOT.hold0) rho0 = tmpRho 
