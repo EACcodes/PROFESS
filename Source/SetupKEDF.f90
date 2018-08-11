@@ -568,7 +568,7 @@ SUBROUTINE SetupFunctional
     call spline_cubic_set ( numint, d(1:numint), ELFvsd(1:numint), 1, 0._DP, 0, 0._DP, ELFvsdDD(1:numint) )
 
 !------------------------------------------------------------------------------
-    CASE(17) ! MGP KEDF 
+    CASE(19) ! MGP KEDF 
       ALLOCATE(keKernel(k1G, k2G, k3G,3), stat=fileStatus)
       IF (fileStatus/=0) THEN
          WRITE(message,*)'Error allocating the MGP kernel table. Leaving.'

@@ -191,6 +191,7 @@ COMMON_OBJS = MathNMS.o MathLBFGS.o MathRKsuite.o MathDCstep.o MathDCsrch.o \
 	   KEDF_TF.o KEDF_VW.o KEDF_GGA.o KEDF_WTkernel.o KEDF_WGCkernel.o \
 	   KEDF_WGC.o KEDF_CAT.o KEDF_WGCD.o KEDF_WT.o KEDF_Q.o \
 	   KEDF_HC10.o KEDF_DenDec.o KEDF_EvW.o \
+       KEDF_MGPkernel.o KEDF_MGP.o \
 	   SetupKEDF.o Report.o Neighbor.o \
 	   CalForce.o RefreshIons.o RefreshCell.o CalStress.o CalPotential.o\
        RhoOptimizers.o RhoDirCG.o RhoDirBFGS.o RhoDirNew.o RhoLineSearch.o \

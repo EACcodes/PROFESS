@@ -320,18 +320,11 @@ SUBROUTINE CalculateKEDFPotPlus(rhoOpt)
 !------------------------------------------------------------------------------
 
   USE CellInfo, ONLY: kinetic
-<<<<<<< HEAD
   USE KEDF_TF, ONLY: CalTF
   USE KEDF_VW, ONLY: CalVW
   USE KEDF_WT, ONLY : WTPotentialPlus
   USE KEDF_WGC, ONLY : WGCPotentialPlus   
-=======
-  USE KEDF_TF, ONLY: CalTF,lambda
-  USE KEDF_VW, ONLY: CalVW
-  USE KEDF_WT, ONLY : WTPotentialPlus
-  USE KEDF_WGC, ONLY : WGCPotentialPlus   
   USE KEDF_MGP, ONLY : MGPPotentialPlus
->>>>>>> 86ef2760f4a74e31322f3edcbdbd6c06a2415ee6
   USE KEDF_Q, ONLY: CalLHQ
   USE KEDF_CAT, ONLY: CalCAT
   USE KEDF_HC10, ONLY: intPot 
