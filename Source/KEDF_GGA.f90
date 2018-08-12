@@ -28,6 +28,8 @@ MODULE KEDF_GGA
     d, &               ! rho/rho0 grid to be interpolated.
     ELFvsd, ELFvsdDD  ! ELF values
 
+  REAL(KIND=DP) :: LKTa0 = 1.0
+
 CONTAINS
 
 SUBROUTINE GGAPotentialPlus(rho, potential, calcEnergy, energy, functionals) 
@@ -96,6 +98,7 @@ SUBROUTINE GGAPotentialPlus(rho, potential, calcEnergy, energy, functionals)
     LG94A2, LG94A4, LG94A6, LG94A8, &
     LG94A10, LG94A12, LG94b, &
     DK87A, DK87B, DK87C, &
+    LKTa, &
     ! penalty energy and its multiplication
     PenaltyE
   
@@ -138,6 +141,7 @@ SUBROUTINE GGAPotentialPlus(rho, potential, calcEnergy, energy, functionals)
   TWmu = 0.2319/cs
   PBE2k = 6.9031
   PBE2mu = 2.0309/cs**2
+  LKTa = LKTa0/cs
   E00A1 = 135.d0
   E00A2 = 28.d0/cs**2
   E00A3 = 5.d0/cs**4
@@ -357,6 +361,20 @@ SUBROUTINE GGAPotentialPlus(rho, potential, calcEnergy, energy, functionals)
       dFds = - 2.d0*DK87A*DK87C*s**2*(1.d0+DK87B*s)/(1.d0+DK87C*s**2)**2 + &
                DK87A*DK87B*s/(1.d0+DK87C*s**2) + 2.d0*DK87A*(1.d0+DK87B*s)/(1.d0+DK87C*s**2)
     
+    Case(19)   ! LKT
+        ! code contributed by Kai Luo (University of Florida)
+        ! reference:
+        ! K. Luo, V.V. Karasiev, S.B. Trickey, Phys. Rev. B 98 (2018): 041111.
+
+         where (s<1e-5)
+           ! (10/3 - a^2) + (5 a^4 s^2)/6 - (61 a^6 s^4)/120
+           F=1.0+(5.d0/3.d0/(cs**2)-LKTa**2/2.0)*s2+5.d0*LKTa**4*s2**2/24.d0
+           dFds = 10.d0/3.d0/(cs**2) - LKTa**2 + 5*LKTa**4*(s2)/6.d0 - 61*LKTa**6*(s2)**2/120.d0
+         elsewhere
+           F=5.d0/3.d0*(s2/cs**2) + 1.d0/cosh(LKTa*sqrt(s2))
+           dFds=10.d0/3.d0/(cs**2) - LKTa/cosh(LKTa*sqrt(s2))*tanh(LKTa*sqrt(s2))/sqrt(s2)
+         endwhere
+
     Case(-99)   ! return zero
       F = 0.d0
       dFds = 0.d0

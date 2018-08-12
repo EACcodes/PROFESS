@@ -106,6 +106,8 @@ MODULE ReadInputFile
   USE KEDF_GGA, ONLY: GGA_functional
   USE KEDF_GGA, ONLY : CP               ! penalty coefficient to help GGA convergence
 
+  USE KEDF_GGA, ONLY: LKTa0
+
   USE Optimizer, ONLY: calOption
   USE Optimizer, ONLY: rhoMethod
   USE Optimizer, ONLY: ionMethod
@@ -859,6 +861,9 @@ SUBROUTINE ReadOptions
               GGA_functional = 17
             CASE("DK87")
               GGA_functional = 18
+            CASE("LKT") 
+              GGA_functional = 19
+              WRITE(message,*) '(input) using GGA LKT KEDF'
             End Select
           ENDIF
         CASE("VW+") ! Density Decomposition using vW+G*TF KEDF 
@@ -994,6 +999,9 @@ SUBROUTINE ReadOptions
             model = NINT(tempReal) ! jmd: unhappy about this change but the whole parser seems rather duct-taped
             WRITE(message,*) '(input) vW+G*TF KEDF uses model ', tempReal
             CALL WrtOut(6, message)
+          CASE("LKT") ! parameter for LKT 
+              LKTa0 = tempReal
+              write(message,*) "LKT parameter a=", LKTa0
           !------------------------------------------------------------------------------
           CASE DEFAULT ! No parameter by that name found.
             WRITE(message,*) 'Warning: Encountered unknown PARA argument ', TRIM(option)
