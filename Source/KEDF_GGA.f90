@@ -28,7 +28,7 @@ MODULE KEDF_GGA
     d, &               ! rho/rho0 grid to be interpolated.
     ELFvsd, ELFvsdDD  ! ELF values
 
-  REAL(KIND=DP) :: LKTa0 = 1.0
+  REAL(KIND=DP) :: LKTa0 = 1.3_DP
 
 CONTAINS
 
