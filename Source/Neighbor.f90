@@ -97,6 +97,7 @@ FUNCTION NNDist_bin (minDistance)
 !    Created by Chen Huang Sep/10/2008
 !    Add binning function  Chen Huang Dec/2009 
 !    bug fixed for binning Steven Jan/2011
+!    bug fix for binning   Kaili Jiang Jan/2019
 !------------------------------------------------------------------------------
 
   USE CellInfo, ONLY : cell
@@ -360,19 +361,19 @@ FUNCTION NNDist_bin (minDistance)
 
                   IF ( xneg ) THEN
                     tmpCoord(1) = tmpCoord(1) - cell%cellReal(1,1)
-                    tmpCoord(2) = tmpCoord(2) - cell%cellReal(1,2)
-                    tmpCoord(3) = tmpCoord(3) - cell%cellReal(1,3)
+                    tmpCoord(2) = tmpCoord(2) - cell%cellReal(2,1)
+                    tmpCoord(3) = tmpCoord(3) - cell%cellReal(3,1)
                   ENDIF
 
                   IF ( yneg ) THEN
-                    tmpCoord(1) = tmpCoord(1) - cell%cellReal(2,1)
+                    tmpCoord(1) = tmpCoord(1) - cell%cellReal(1,2)
                     tmpCoord(2) = tmpCoord(2) - cell%cellReal(2,2)
-                    tmpCoord(3) = tmpCoord(3) - cell%cellReal(2,3)
+                    tmpCoord(3) = tmpCoord(3) - cell%cellReal(3,2)
                   ENDIF
 
                   IF ( zneg ) THEN
-                    tmpCoord(1) = tmpCoord(1) - cell%cellReal(3,1)
-                    tmpCoord(2) = tmpCoord(2) - cell%cellReal(3,2)
+                    tmpCoord(1) = tmpCoord(1) - cell%cellReal(1,3)
+                    tmpCoord(2) = tmpCoord(2) - cell%cellReal(2,3)
                     tmpCoord(3) = tmpCoord(3) - cell%cellReal(3,3)
                   ENDIF
 
