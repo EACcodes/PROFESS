@@ -568,6 +568,31 @@ SUBROUTINE SetupFunctional
     call spline_cubic_set ( numint, d(1:numint), ELFvsd(1:numint), 1, 0._DP, 0, 0._DP, ELFvsdDD(1:numint) )
 
 !------------------------------------------------------------------------------
+    CASE(19) ! MGP KEDF 
+      ALLOCATE(keKernel(k1G, k2G, k3G,3), stat=fileStatus)
+      IF (fileStatus/=0) THEN
+         WRITE(message,*)'Error allocating the MGP kernel table. Leaving.'
+         CALL Error(6, message)
+      END IF
+      IF (lambda<-99) lambda = 1.0_DP
+      IF (mu<-99) mu = 1.0_DP
+      WRITE(6,'(A,F12.6)') " Lambda for TF KEDF in MGP is ", lambda
+      WRITE(6,'(A,F12.6)') " Mu     for vW KEDF in MGP is ", mu
+      IF (rho0>0._DP) THEN
+         hold0 = .TRUE.
+      ELSE
+         rho0 = cell%numEle/cell%vol
+      END IF
+      IF (gamma<0._DP) gamma = 1._DP
+      WRITE(6,'(A,F12.6)') " gamma in MGP KEDF is ", gamma
+
+      WRITE(6,'(A,F10.4)') " Original rho0 (Electron/Bohr^3) is ", rho0
+
+      IF (.NOT. holdS) THEN
+         rhoS=0._DP
+      END IF
+
+!------------------------------------------------------------------------------
   CASE DEFAULT ! By default we do nothing.
     
     WRITE(message,*) "SetupFunctional: Please check your type of KEDF, ", kinetic 
@@ -599,6 +624,7 @@ SUBROUTINE KEDFRefresh(kinetic)
   USE PlaneWave, ONLY: FillQTable
   USE KEDF_WTkernel, ONLY: FillWT
   USE KEDF_WGCkernel, ONLY: FillWGC
+  USE KEDF_MGPkernel, ONLY: FillMGP
   USE KEDF_CAT, ONLY: FillCAT
   USE Sys, ONLY: hold0, holdS, rho0, rhoS
   USE KEDF_WGCD, ONLY: mrhos
@@ -632,6 +658,10 @@ SUBROUTINE KEDFRefresh(kinetic)
       IF (.NOT.hold0) rho0 = tmpRho 
       IF (.NOT.holdS) rhoS = mrhos * tmpRho 
       CALL FillWGC()
+    ! 19: MGP
+    CASE(19)
+     IF (.NOT.hold0) rho0 = tmpRho
+     CALL FillMGP()
     ! 10: CAT
     CASE(10)
       IF (.NOT.hold0) rho0 = tmpRho 

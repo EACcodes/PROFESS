@@ -324,6 +324,7 @@ SUBROUTINE CalculateKEDFPotPlus(rhoOpt)
   USE KEDF_VW, ONLY: CalVW
   USE KEDF_WT, ONLY : WTPotentialPlus
   USE KEDF_WGC, ONLY : WGCPotentialPlus   
+  USE KEDF_MGP, ONLY : MGPPotentialPlus
   USE KEDF_Q, ONLY: CalLHQ
   USE KEDF_CAT, ONLY: CalCAT
   USE KEDF_HC10, ONLY: intPot 
@@ -567,6 +568,29 @@ SUBROUTINE CalculateKEDFPotPlus(rhoOpt)
     !-----------------------------------------
     CASE (18)
       CALL Cal_EVC(potential, rho, calcEnergy, locETable, optSqrt)
+  
+    !----------------------------------------
+    ! Mi-Genova-Pavanello (MGP) 
+    !---------------------------------------
+    CASE (19)
+      CALL CalTF(potential, rho, calcEnergy, locETable(7))
+      SELECT CASE(numSpin)
+      CASE(1)
+        ! Compute the nonlocal term
+        tempPotential = 0._DP
+        CALL MGPPotentialPlus(rhoOpt, tempPotential, calcEnergy, locETable(9), bvac)
+        potential = potential + SPREAD(tempPotential, 4, numSpin)
+      CASE(2)
+        message="MGP not implemented for open-shell systems YET. STOP."
+        WRITE(errorUnit,'(A)') message
+        CALL QUIT(message);
+      END SELECT
+
+      ! Chain rule: dE/d(sqrt(rho)) = dE/d(rho) * 2*sqrt(rho)
+      IF (optSqrt) THEN
+        potential = 2._DP * SQRT(rho) * potential
+      ENDIF
+      CALL CalVW(potential, rho, calcEnergy, optSqrt, locETable(8))
 
     CASE DEFAULT  ! This case should never occur.
       message=" CalculatePotentialPlus: The KEDF selected is not implemented. STOP."

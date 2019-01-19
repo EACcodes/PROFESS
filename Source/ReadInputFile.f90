@@ -53,6 +53,7 @@ MODULE ReadInputFile
   USE Sys, ONLY: bvac
   USE Sys, ONLY: gridSpacing
 
+  USE Sys, ONLY: LumgpExp, LumgpFactor  ! Used by MGP KEDF
   USE PlaneWave, ONLY: energyCutoff ! The kinetic energy cutoff
   USE SetupFFT, ONLY: dimType  ! Specifies how to calculate the grid size  
 
@@ -870,6 +871,9 @@ SUBROUTINE ReadOptions
         CASE("EVC") ! EvW using WGC
           kinetic =18
           WRITE(message,*) '(input) EvW KEDF based on WGC KEDF' 
+        CASE("MGP")        ! TF + vW + MGP functional.
+          kinetic = 19
+          WRITE(message, *) '(input) MGP KEDF to be used.'
         CASE DEFAULT
           WRITE(message,*) 'Warning: Encountered unknown KINE argument ', TRIM(option)
           CALL Error(6,message) 
@@ -922,6 +926,14 @@ SUBROUTINE ReadOptions
           CASE("MRHO")   ! multiplier of rhoS, mostly used in Steven's KEDF
             mrhos = tempReal
             WRITE(message,*) '(input) MRHOS is ', tempReal
+            CALL WrtOut(6, message)
+          CASE("LUME", "LE", "LUE") ! Setting the value of Lumgp exponent.
+            LumgpExp = tempReal
+            WRITE(message,*) '(input) LumgpExp set to ', LumgpExp
+            CALL WrtOut(6, message)
+          CASE("LUMF", "LF", "LUF") ! Setting the value of Lumgp factor.
+            LumgpFactor = tempReal
+            WRITE(message,*) '(input) LumgpFactor set to ', LumgpFactor
             CALL WrtOut(6, message)
           !------------------------------------------------------------------------------
           CASE("PBEC") ! Setting rho* to its value

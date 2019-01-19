@@ -142,6 +142,9 @@ MODULE SYS
   LOGICAL :: holdS=.FALSE. 
   ! False means rhoS is always numele/Volume(cellReal).
   !
+  REAL(KIND=DP) :: LumgpExp    = 0.0_DP
+  REAL(KIND=DP) :: LumgpFactor = 0.0_DP
+  ! Kinetic Lumgp parameters (needed in MGP)
   
 CONTAINS
 
