@@ -108,6 +108,7 @@ MODULE ReadInputFile
   USE KEDF_GGA, ONLY : CP               ! penalty coefficient to help GGA convergence
 
   USE KEDF_GGA, ONLY: LKTa0
+  USE KEDF_GGA, ONLY: Lmu,Lbet,Llam,Lsig
 
   USE Optimizer, ONLY: calOption
   USE Optimizer, ONLY: rhoMethod
@@ -864,9 +865,38 @@ SUBROUTINE ReadOptions
               GGA_functional = 18
             CASE("LKT") 
               GGA_functional = 19
-              WRITE(message,*) '(input) using GGA LKT KEDF'
+            CASE DEFAULT
+             WRITE(message,*) 'Warning: Encountered unknown GGA functional ', TRIM(option)
+             CALL Error(6,message) 
             End Select
+            WRITE(message,*) '(input) Selected GGA kinetic functional', GGA_functional 
           ENDIF
+
+        CASE("MGGA")       ! Laplacian-Level MGGA functionals
+          kinetic = 15 
+          WRITE(message, *) '(input) Laplacian-Level Meta-GGA-type KEDF to be used'
+          ! backward to read specific GGA functional
+          BACKSPACE inputUnit
+          READ(inputUnit, *, IOSTAT=fileStatus) keyword, message, option
+          IF (fileStatus/=0) THEN
+            WRITE(message,*) ' PARA MGGA format error. Format is: PARA MGGA [OPTION]'
+            CALL Error(6, message)
+          ELSE
+            CALL Uppercase(option)
+            SELECT CASE ( TRIM(option(1:5)) )
+            CASE("GE4")
+              GGA_functional = 50
+            CASE("PGL")
+              GGA_functional = 51
+            CASE("PGSLR")
+              GGA_functional = 52
+            CASE DEFAULT 
+             WRITE(message,*) 'Warning: Encountered unknown Meta-GGA functional ', TRIM(option)
+             CALL Error(6,message) 
+            End Select
+            WRITE(message,*) '(input) Selected Meta-GGA kinetic functional', GGA_functional 
+          ENDIF
+
         CASE("VW+") ! Density Decomposition using vW+G*TF KEDF 
           kinetic = 16
           WRITE(message,*) '(input) Density Decomposition using vW+G*TF KEDF'
@@ -1014,6 +1044,24 @@ SUBROUTINE ReadOptions
           CASE("LKT") ! parameter for LKT 
               LKTa0 = tempReal
               write(message,*) "LKT parameter a=", LKTa0
+          !-----------------------------------------------------------------------------
+          ! Laplacian-Level Meta-GGA
+          CASE("LMU")   
+            Lmu = tempReal
+            WRITE(message,*) '(input) PGL parameter Lmu', tempReal
+            CALL WrtOut(6, message)
+          CASE("LBET")   
+            Lbet = tempReal 
+            WRITE(message,*) '(input) PGL paramter Lbet ', tempReal
+            CALL WrtOut(6, message)
+          CASE("LLAM")   
+            Llam = tempReal
+            WRITE(message,*) '(input) PGSLr parameter Llam', tempReal
+            CALL WrtOut(6, message)
+          CASE("LSIG")   
+            Lsig = tempReal 
+            WRITE(message,*) '(input) PGSLr paramter Lsig ', tempReal
+            CALL WrtOut(6, message)
           !------------------------------------------------------------------------------
           CASE DEFAULT ! No parameter by that name found.
             WRITE(message,*) 'Warning: Encountered unknown PARA argument ', TRIM(option)

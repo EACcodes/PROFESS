@@ -30,6 +30,10 @@ MODULE KEDF_GGA
 
   REAL(KIND=DP) :: LKTa0 = 1.3_DP
 
+  REAL(KIND=DP) :: Lmu  = 40.0_DP/27.0_DP
+  REAL(KIND=DP) :: Lbet  = 0.25_DP
+  REAL(KIND=DP) :: Llam  = 0.4_DP
+  REAL(KIND=DP) :: Lsig  = 0.2_DP
 CONTAINS
 
 SUBROUTINE GGAPotentialPlus(rho, potential, calcEnergy, energy, functionals) 
@@ -37,6 +41,8 @@ SUBROUTINE GGAPotentialPlus(rho, potential, calcEnergy, energy, functionals)
 ! This is a subroutine calculate all kinds of GGA functionals. See reviews in 
 ! ref(1): JCTC 5, 3161 (2009), 
 ! ref(2): JCP 127, 144109 (2007)
+!
+! 2019: Laplacial-Level Meta-GGA added by L.A. Constantin, E. Fabiano and F. Della Sala
 !
 ! GLOBAL/MODULE VARIABLES CHANGED:
 !
@@ -56,7 +62,8 @@ SUBROUTINE GGAPotentialPlus(rho, potential, calcEnergy, energy, functionals)
                                 !>> External variables <<!
   INTEGER, INTENT(in) :: &
     functionals          ! the flag telling which GGA funtional we are using
-  
+                         ! functional >=50 are Laplacial-Level Meta-GGA
+   
   LOGICAL, INTENT(in) :: &
     calcEnergy          ! if energy is calculated
   
@@ -101,23 +108,33 @@ SUBROUTINE GGAPotentialPlus(rho, potential, calcEnergy, energy, functionals)
     LKTa, &
     ! penalty energy and its multiplication
     PenaltyE
-  
+ 
+
   REAL(KIND=DP), Dimension(size(rho,1),size(rho,2),size(rho,3)) :: &
     temprho, rho23, rho83, rho43, &
-    s, s2, x,&          ! reduced gradient, x in DK functional
-    dsdrho, &           ! ds/drho
+    s, s2, x, &         ! reduced gradient, x in DK functional
+    dsdrho,  &          ! ds/drho
     tf, &               ! thomas fermi energy density
     dtfdrho, &          ! dtf/drho
     F, &                ! Enhancemence factor
     dFds, &             ! dF/ds
     PenaltyP            ! penalty potential term
 
+  REAL(KIND=DP), Dimension(size(rho,1),size(rho,2),size(rho,3)) :: &
+    rho53, &            
+    qq,  &             ! reduce Laplacian q
+    xlap2, &           ! Lapacian
+    dqqdrho,&          ! dq/drho
+    dqqdlap, &         ! dq/dlap
+    dFdqq              ! dF/dq
+
   REAL(KIND=DP), Dimension(size(rho,1),size(rho,2),size(rho,3),3) :: &
     grad, &             ! density gradient
     dsdgrad, &          ! ds/dgradrho
     group               ! for calculating gradient use
 
-  COMPLEX(kind=DP), DIMENSION(k1G, k2G, k3G) :: rhoRecip
+  COMPLEX(kind=DP), DIMENSION(k1G, k2G, k3G) :: rhoRecip,recq
+  
 
                                 !>> Initialization <<!
   tf = CTF * rho**(5.0_DP/3.0_DP)
@@ -196,6 +213,16 @@ SUBROUTINE GGAPotentialPlus(rho, potential, calcEnergy, energy, functionals)
   ! calculate s
   s = sqrt( grad(:,:,:,1)**2 + grad(:,:,:,2)**2 + grad(:,:,:,3)**2 ) / rho43
   s2 = s*s
+
+
+  ! Laplacial-level meta-GGA
+  if (functionals.ge.50) then  
+   Rho53        = tempRho**fivethird
+   xlap2(:,:,:) = -FFT(qtable(:,:,:)**2*rhoRecip)
+   qq           = xlap2(:,:,:)/rho53/cs/cs
+   dqqdrho      = -5.d0/3.d0*qq/tempRho
+   dqqdlap      = 1.d0/rho53/cs/cs
+  endif
 
   ! calculate dtf/drho, ds/drho, and ds/dgrad
   dtfdrho = fivethird * CTF * rho23
@@ -375,6 +402,35 @@ SUBROUTINE GGAPotentialPlus(rho, potential, calcEnergy, energy, functionals)
            dFds=10.d0/3.d0/(cs**2) - LKTa/cosh(LKTa*sqrt(s2))*tanh(LKTa*sqrt(s2))/sqrt(s2)
          endwhere
 
+
+    Case(50)  ! GE4
+      F     = 0.1D1 + 0.5D1 / 0.27D2 * s2 / (cs**2) + 0.8D1 / 0.81D2 * qq**2 &
+              - s2 * qq /(cs**2) / 0.9D1 + 0.8D1 / 0.243D3 *s2*s2 / (cs**4)
+      dFds  = (-0.2D1 / 0.243D3) * (27.d0 * qq * (cs**2) - 45.d0 * (cs**2) - 16.d0 * s2 & 
+                                   ) /(cs**4)
+      dFdqq = 0.16D2 / 0.81D2 * qq - s2/(cs**2) / 0.9D1
+     
+    Case(51) ! The PG(mu,beta) family of functionals 
+             ! when beta=0,    mu=1        -> PG1
+             ! when beta=0.25, mu=40/27    -> PGSL0.25 [Default] 
+             ! L.A. Constantin, E. Fabiano, F. Della Sala, J. Phys. Chem. Lett. 9, 4385 (2018)
+
+       F     = 0.5D1 / 0.3D1 * s2 / cs ** 2 + exp(-Lmu * s2 / cs ** 2) + Lbet * qq ** 2
+       dFds  = -0.2D1 / 0.3D1 * (0.3D1 * Lmu * exp(-Lmu * s2 / cs ** 2) - 0.5D1 &
+                                ) / cs ** 2
+       dFdqq = 2 * Lbet * qq
+
+    Case(52)  ! The  PGSLr family of functionals   
+              ! PGSL0.25-lambda*q*s**2 + mu*s**4
+              ! Default: lambda=0.4, and mu=0.2 
+      F     = 0.5D1 / 0.3D1 * s2 / cs ** 2 + exp(-0.40D2 / 0.27D2 * s2 / cs ** 2) + &
+              0.25D0 * qq ** 2 - Llam * qq * s2 / cs ** 2 + Lsig * s2*s2 / cs ** 4
+      dFds  = -0.2D1 / 0.27D2 * ( 27 * Llam * qq * cs ** 2 + 0.40D2 * &
+                                  exp(-0.40D2 / 0.27D2 * s ** 2 / cs ** 2) * (cs ** 2) - &
+                                  (54 * Lsig * s ** 2) - (45 * cs ** 2) &
+                                ) / (cs ** 4)
+      dFdqq = (0.5D0 * qq * cs ** 2 - Llam * s ** 2) / cs ** 2
+
     Case(-99)   ! return zero
       F = 0.d0
       dFds = 0.d0
@@ -393,9 +449,11 @@ SUBROUTINE GGAPotentialPlus(rho, potential, calcEnergy, energy, functionals)
   ! calculate energy if needed
   If(calcEnergy) then
     energy = Sum(tf*F)
-    PenaltyE = CP * ( 0.5_DP * SUM(sqrt(temprho) * FFT( FFT( sqrt(temprho) ) * qTable**2)) - &
+    if (CP.gt.1.d-8) then 
+     PenaltyE = CP * ( 0.5_DP * SUM(sqrt(temprho) * FFT( FFT( sqrt(temprho) ) * qTable**2)) - &
                     SUM( (grad(:,:,:,1)**2 + grad(:,:,:,2)**2 + grad(:,:,:,3)**2)/temprho )/8.d0 )
-    energy = energy + PenaltyE
+     energy = energy + PenaltyE
+    endif
   Endif
   
   ! calculate potential
@@ -405,21 +463,36 @@ SUBROUTINE GGAPotentialPlus(rho, potential, calcEnergy, energy, functionals)
   group(:,:,:,3) = tf * dfds * dsdgrad(:,:,:,3)
   
   ! get divergence term first
-  potential = FFT( imag*qVectors(:,:,:,1)*FFT( group(:,:,:,1) ) + &
-                   imag*qVectors(:,:,:,2)*FFT( group(:,:,:,2) ) + &
-                   imag*qVectors(:,:,:,3)*FFT( group(:,:,:,3) ) )
+
+  potential = -FFT( imag*qVectors(:,:,:,1)*FFT( group(:,:,:,1) ) + &
+                    imag*qVectors(:,:,:,2)*FFT( group(:,:,:,2) ) + &
+                    imag*qVectors(:,:,:,3)*FFT( group(:,:,:,3) ) )
+
+  ! add meta-GGA non-local part 
+  if (functionals.ge.50) then
+   recq = FFT(tf*dFdqq*dqqdlap)
+   potential = potential + FFT(-qtable(:,:,:)**2*recq)
+  endif
 
   ! final potential
-  potential = dtfdrho * F + tf * dFds * dsdrho - potential
+  potential = dtfdrho * F + tf * dFds * dsdrho + potential
 
-  PenaltyP = FFT( imag*qVectors(:,:,:,1)*FFT( grad(:,:,:,1)/temprho/4.d0 )  + &
-                  imag*qVectors(:,:,:,2)*FFT( grad(:,:,:,2)/temprho/4.d0 )  + &
-                  imag*qVectors(:,:,:,3)*FFT( grad(:,:,:,3)/temprho/4.d0 )  )
-  PenaltyP = -( grad(:,:,:,1)**2.d0 + grad(:,:,:,2)**2.d0 +  grad(:,:,:,3)**2.d0 ) / temprho**2.d0 / 8.d0 - PenaltyP
+  ! add meta-GGA local part
+  if  (functionals.ge.50) then
+  potential =              tf * dFdqq * dqqdrho + potential
+  endif
 
-  PenaltyP = CP * ( FFT( FFT(sqrt(temprho)) * qTable**2)/2.d0/sqrt(temprho) - PenaltyP )
+  if (CP.gt.1.d-8) then 
+
+   PenaltyP = FFT( imag*qVectors(:,:,:,1)*FFT( grad(:,:,:,1)/temprho/4.d0 )  + &
+                   imag*qVectors(:,:,:,2)*FFT( grad(:,:,:,2)/temprho/4.d0 )  + &
+                   imag*qVectors(:,:,:,3)*FFT( grad(:,:,:,3)/temprho/4.d0 )  )
+   PenaltyP = -( grad(:,:,:,1)**2.d0 + grad(:,:,:,2)**2.d0 +  grad(:,:,:,3)**2.d0 ) / temprho**2.d0 / 8.d0 - PenaltyP
+
+   PenaltyP = CP * ( FFT( FFT(sqrt(temprho)) * qTable**2)/2.d0/sqrt(temprho) - PenaltyP )
   
-  potential = potential + PenaltyP
+   potential = potential + PenaltyP
+  endif
 
 END Subroutine GGAPotentialPlus
 
