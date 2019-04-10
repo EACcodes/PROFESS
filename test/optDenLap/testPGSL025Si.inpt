@@ -1,0 +1,16 @@
+ecut 2600 # The kinetic energy cutoff
+MINI DEN
+meth NTN 
+METH ION non
+
+KINE MGGA PGL
+
+CONV 3
+SPIN 1
+
+EXCH LDA 
+
+geometryfile Si1sc.ion
+
+print minimizer density 2   # Print lots of detail about electronic minimization 
+

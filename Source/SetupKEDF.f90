@@ -99,8 +99,8 @@ SUBROUTINE SetupFunctional
   USE KEDF_WGCD, ONLY: scalefunt
   USE KEDF_WGCD, ONLY: scalefunDD
   USE KEDF_EvW, ONLY: kloc, aloc
-  USE KEDF_GGA, ONLY: numint, d, ELFvsd, ELFvsdDD
-
+  USE KEDF_GGA, ONLY: numint, d, ELFvsd, ELFvsdDD,GGA_functional
+  USE KEDF_GGA, ONLY: Lmu,Lbet,Llam,Lsig
   USE MathSplines, ONLY: spline_cubic_set ! For Steven's KEDF.
   USE MathSplines, ONLY: spline_cubic_val
 
@@ -512,7 +512,12 @@ SUBROUTINE SetupFunctional
   CASE(15) ! GGA
     IF (lambda<-99.0) lambda = 1.0_DP
     IF (mu<-99._DP) mu = 1.0_DP
-    
+    if (GGA_functional.lt.50) then
+     WRITE(outputUnit,'(1X,"GGA functional ",I)') GGA_functional   
+    else
+     WRITE(outputUnit,'(1X,"Meta-GGA functional ",I)') GGA_functional   
+     write(outputUnit,'(4F20.14)') Lmu,Lbet,Llam,Lsig
+    endif
 !------------------------------------------------------------------------------
   CASE(16) ! GGA + WGCD
     if(rho0==-1.d0) then
