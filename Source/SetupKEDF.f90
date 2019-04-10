@@ -513,9 +513,9 @@ SUBROUTINE SetupFunctional
     IF (lambda<-99.0) lambda = 1.0_DP
     IF (mu<-99._DP) mu = 1.0_DP
     if (GGA_functional.lt.50) then
-     WRITE(outputUnit,'(1X,"GGA functional ",I)') GGA_functional   
+     WRITE(outputUnit,'(1X,"GGA functional ",I4)') GGA_functional   
     else
-     WRITE(outputUnit,'(1X,"Meta-GGA functional ",I)') GGA_functional   
+     WRITE(outputUnit,'(1X,"Meta-GGA functional ",I4)') GGA_functional   
      write(outputUnit,'(4F20.14)') Lmu,Lbet,Llam,Lsig
     endif
 !------------------------------------------------------------------------------
