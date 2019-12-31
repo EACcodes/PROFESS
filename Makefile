@@ -96,7 +96,7 @@ ifeq ($(MACHINE),x86_64)
   #---------------------
   # FFLAGS flag
   #---------------------
-  FFLAGS=-O3 -I${XC_DIR}include -I${FFTW_DIR}/include -cpp
+  FFLAGS=-O3 -I${XC_DIR}include -I${FFTW_DIR}/include -cpp -J${WORKDIR}
 
   #---------------------
   # LDLIBS flag
