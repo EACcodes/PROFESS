@@ -46,7 +46,7 @@ ifeq ($(MACHINE),x86_64)
 # The detail procedures to install libxc are:
 # 1) download Libxc library from: 
 # http://www.tddft.org/programs/octopus/wiki/index.php/Libxc:download
-# 2) enter the FFTW package and type: ./configure --prefix=/XC_DIR/
+# 2) enter the LIBXC package and type: ./configure --prefix=/XC_DIR/
 # 3) type: make install
 # 4) type: make
 # (Make sure you use the same compiler for PROFESS and Libxc)
